@@ -696,20 +696,6 @@ export default function Contact() {
                   ))}
                 </div>
 
-                {/* Additional info card to fill space */}
-                <div className="mt-auto">
-                  <div className="bg-gradient-to-r from-[var(--color-primary)]/5 to-[var(--color-primary-dark)]/5 p-6 rounded-xl border border-[var(--color-primary)]/20">
-                    <div className="flex items-center gap-3">
-                      <div className="bg-[var(--color-primary)] text-white p-3 rounded-lg">
-                        <User size={20} />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-gray-900">Branch Incharge</h3>
-                        <p className="text-gray-600 text-sm">CA Naidu Akula - 10+ Years Experience</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
 
