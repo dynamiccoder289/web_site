@@ -59,7 +59,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen">
+   <div className="min-h-screen overflow-x-hidden">
       <Navbar currentPage={currentPage} onNavigate={setCurrentPage} />
       <main>{renderPage()}</main>
       {/* <Footer onNavigate={setCurrentPage} /> */}
