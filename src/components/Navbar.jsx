@@ -91,7 +91,7 @@ export default function Navbar({ currentPage, onNavigate }) {
             </div>
 
             {/* ✅ Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-6">
+            <div className="hidden lg:flex items-center space-x-6">
               {navItems.map((item) => {
                 const isActive =
                   currentPage === item.id ||
@@ -159,7 +159,7 @@ export default function Navbar({ currentPage, onNavigate }) {
             </div>
 
             {/* ✅ CTA */}
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <button
                 onClick={() => handleNavigate("contact")}
                 className="btn-primary text-sm tracking-wide hover:scale-[1.02] transition-transform"
@@ -170,7 +170,7 @@ export default function Navbar({ currentPage, onNavigate }) {
 
             {/* ✅ Mobile Menu Button */}
             <button
-              className="md:hidden text-[var(--color-gray-800)] p-2 rounded-lg hover:bg-[var(--color-gray-50)] transition-colors"
+              className="lg:hidden text-[var(--color-gray-800)] p-2 rounded-lg hover:bg-[var(--color-gray-50)] transition-colors"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? <X size={26} /> : <Menu size={26} />}
@@ -180,7 +180,7 @@ export default function Navbar({ currentPage, onNavigate }) {
 
         {/* ✅ Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden bg-white border-t border-[var(--color-gray-100)] animate-in slide-in-from-top duration-200">
+          <div className="lg:hidden bg-white border-t border-[var(--color-gray-100)] animate-in slide-in-from-top duration-200">
             <div className="px-4 py-4 space-y-2">
               {navItems.map((item) => {
                 const isActive =

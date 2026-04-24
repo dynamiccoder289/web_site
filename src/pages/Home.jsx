@@ -228,17 +228,17 @@ export default function Home({ onNavigate }) {
             </div>
           ))}
 
-          {/* Prev / Next */}
+          {/* Prev / Next — desktop only */}
           <button
             onClick={prevSlide}
-            className="absolute left-3 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/35 backdrop-blur-sm text-white p-2 md:p-3 rounded-full transition-all duration-300"
+            className="hidden lg:flex absolute left-3 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/35 backdrop-blur-sm text-white p-2 md:p-3 rounded-full transition-all duration-300 items-center justify-center"
             aria-label="Previous slide"
           >
             <ChevronLeft size={22} />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-3 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/35 backdrop-blur-sm text-white p-2 md:p-3 rounded-full transition-all duration-300"
+            className="hidden lg:flex absolute right-3 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/35 backdrop-blur-sm text-white p-2 md:p-3 rounded-full transition-all duration-300 items-center justify-center"
             aria-label="Next slide"
           >
             <ChevronRight size={22} />
