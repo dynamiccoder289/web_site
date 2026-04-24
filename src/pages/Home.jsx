@@ -1,165 +1,273 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { HOME_SLIDES } from '../constants/homeConstants';
+
+const TICK_INTERVAL = 85;
+
+// Corner words per slide — all positioned on the RIGHT side only
+// so they never overlap the left-side title/subtitle/CTA content
+const SLIDE_WORDS = [
+  [
+    { text: 'Independence', pos: 'rt1' },
+    { text: 'Integrity',    pos: 'rt2' },
+    { text: 'Equanimity',   pos: 'rb1' },
+    { text: '= Excellence', pos: 'rb2', gold: true },
+  ],
+  [
+    { text: 'Experience',  pos: 'rt1' },
+    { text: 'Equanimity',  pos: 'rt2' },
+    { text: 'Enterprise',  pos: 'rb2' },
+    { text: 'Energy',      pos: 'rb1' },
+    { text: 'Enthusiasm',  pos: 'rc',  gold: true },
+  ],
+  [
+    { text: 'Advisory',    pos: 'rt1' },
+    { text: 'Strategy',    pos: 'rt2' },
+    { text: 'Growth',      pos: 'rb1' },
+    { text: 'Innovation',  pos: 'rb2', gold: true },
+  ],
+  [
+    { text: 'Trust',       pos: 'rt1' },
+    { text: 'Expertise',   pos: 'rt2' },
+    { text: 'Excellence',  pos: 'rb1', gold: true },
+    { text: 'Legacy',      pos: 'rb2' },
+  ],
+];
+
+const WORD_DELAYS = [0, 700, 1400, 2200, 3000];
+
+// All positions are on the RIGHT half of the screen
+const posStyle = {
+  rt1: { top: '12%',  right: '6%',  textAlign: 'right' },   // top-right upper
+  rt2: { top: '28%',  right: '6%',  textAlign: 'right' },   // top-right lower
+  rc:  { top: '50%',  right: '6%',  textAlign: 'right', transform: 'translateY(-50%)' }, // right middle
+  rb1: { bottom: '28%', right: '6%', textAlign: 'right' },  // bottom-right upper
+  rb2: { bottom: '12%', right: '6%', textAlign: 'right' },  // bottom-right lower
+};
+
+function CornerWords({ slideIndex, animKey }) {
+  const words = SLIDE_WORDS[slideIndex] || [];
+  const [visible, setVisible] = useState([]);
+
+  useEffect(() => {
+    setVisible([]);
+    const timers = words.map((_, i) =>
+      setTimeout(() => setVisible((v) => [...v, i]), WORD_DELAYS[i] ?? i * 700)
+    );
+    return () => timers.forEach(clearTimeout);
+  }, [animKey]);
+
+  return (
+    <>
+      {words.map((word, i) =>
+        visible.includes(i) ? (
+          <span
+            key={`${animKey}-${i}`}
+            style={{
+              position: 'absolute',
+              zIndex: 25,
+              fontFamily: "'Raleway', 'Segoe UI', sans-serif",
+              fontSize: 'clamp(13px, 1.6vw, 22px)',
+              fontWeight: 700,
+              letterSpacing: '3px',
+              textTransform: 'uppercase',
+              color: word.gold ? '#f5c518' : 'rgba(255,255,255,0.88)',
+              pointerEvents: 'none',
+              animation: 'zoomInWord 0.65s cubic-bezier(0.22,1,0.36,1) both',
+              textShadow: '0 2px 8px rgba(0,0,0,0.5)',
+              ...posStyle[word.pos],
+            }}
+          >
+            {word.text}
+          </span>
+        ) : null
+      )}
+    </>
+  );
+}
 
 export default function Home({ onNavigate }) {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [progress, setProgress] = useState(0);
+  const [textKey, setTextKey] = useState(0);
+  const progressRef = useRef(0);
+  const intervalRef = useRef(null);
 
-  // const slides = [
-  //   {
-  //     image: 'https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg?auto=compress&cs=tinysrgb&w=1920',
-  //     title: 'Expert Taxation & Compliance Services',
-  //     subtitle: 'Comprehensive solutions for all your tax and regulatory needs',
-  //     cta: 'Explore Services',
-  //     ctaAction: () => onNavigate('services'),
-  //   },
-  //   {
-  //     image: 'https://images.pexels.com/photos/7788009/pexels-photo-7788009.jpeg?auto=compress&cs=tinysrgb&w=1920',
-  //     title: 'Professional Audit & Assurance',
-  //     subtitle: 'Delivering accuracy, transparency, and confidence in financial reporting',
-  //     cta: 'Learn More',
-  //     ctaAction: () => onNavigate('audit-assurance'),
-  //   },
-  //   {
-  //     image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1920',
-  //     title: 'Strategic Business Advisory',
-  //     subtitle: 'Empowering businesses with insights for sustainable growth',
-  //     cta: 'Get Consultation',
-  //     ctaAction: () => onNavigate('business-advisory'),
-  //   },
-  //   {
-  //     image: 'https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=1920',
-  //     title: '15+ Years of Excellence',
-  //     subtitle: 'Trusted by 500+ clients across diverse industries',
-  //     cta: 'Our Experience',
-  //     ctaAction: () => onNavigate('experience'),
-  //   },
-  // ];
+  const slides = HOME_SLIDES.map((slide) => ({
+    ...slide,
+    ctaAction: () => onNavigate(slide.ctaTarget),
+  }));
 
-  const slides = [
-    {
-      image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1920&q=80',
-      title: 'Expert Taxation & Compliance Services',
-      subtitle: 'Comprehensive solutions for all your tax and regulatory needs',
-      cta: 'Explore Services',
-      ctaAction: () => onNavigate('services'),
-    },
-    {
-      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80',
-      title: 'Professional Audit & Assurance',
-      subtitle: 'Delivering accuracy, transparency, and confidence in financial reporting',
-      cta: 'Learn More',
-      ctaAction: () => onNavigate('audit-assurance'),
-    },
-    {
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80',
-      title: 'Strategic Business Advisory',
-      subtitle: 'Empowering businesses with insights for sustainable growth',
-      cta: 'Get Consultation',
-      ctaAction: () => onNavigate('business-advisory'),
-    },
-    {
-      image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1920&q=80',
-      title: '1+ Years of Excellence',
-      subtitle: 'Trusted by 500+ clients across diverse industries',
-      cta: 'Our Experience',
-      ctaAction: () => onNavigate('experience'),
-    },
-  ];
+  const startProgress = () => {
+    clearInterval(intervalRef.current);
+    progressRef.current = 0;
+    setProgress(0);
+    setTextKey((k) => k + 1);
+
+    intervalRef.current = setInterval(() => {
+      progressRef.current += 1;
+      setProgress(progressRef.current);
+      if (progressRef.current >= 100) {
+        clearInterval(intervalRef.current);
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+      }
+    }, TICK_INTERVAL);
+  };
+
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [slides.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+    startProgress();
+    return () => clearInterval(intervalRef.current);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentSlide]);
 
   const goToSlide = (index) => {
+    if (index === currentSlide) return;
+    clearInterval(intervalRef.current);
     setCurrentSlide(index);
   };
 
+  const nextSlide = () => goToSlide((currentSlide + 1) % slides.length);
+  const prevSlide = () => goToSlide((currentSlide - 1 + slides.length) % slides.length);
+
   return (
-    <div className="relative w-full overflow-hidden">
-      {/* Main slider container - NOT using h-screen */}
-      <div className="relative h-[calc(100vh-5.5rem)]"> {/* Subtract navbar height */}
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
-            }`}
-          >
-            {/* Dark overlay for text readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent z-10"></div>
+    <>
+      <style>{`
+        @keyframes zoomInWord {
+          0%   { opacity: 0; transform: scale(0.3) translateZ(0); }
+          65%  { opacity: 1; transform: scale(1.1) translateZ(0); }
+          100% { opacity: 1; transform: scale(1)   translateZ(0); }
+        }
+        @keyframes slideInLeft {
+          from { opacity: 0; transform: translateX(-50px); }
+          to   { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInBtn {
+          from { opacity: 0; transform: translateY(16px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        .slide-title    { animation: slideInLeft 0.75s cubic-bezier(0.22,1,0.36,1) both; }
+        .slide-subtitle { animation: slideInUp   0.75s 0.22s cubic-bezier(0.22,1,0.36,1) both; }
+        .slide-cta      { animation: fadeInBtn   0.75s 0.44s cubic-bezier(0.22,1,0.36,1) both; }
 
-            <img
-              src={slide.image}
-              alt={slide.title}
-              className="w-full h-full object-cover"
-              loading="eager"
-            />
+        .progress-bar-track {
+          height: 3px;
+          background: rgba(255,255,255,0.3);
+          border-radius: 2px;
+          overflow: hidden;
+          width: 40px;
+          transition: width 0.3s ease;
+          cursor: pointer;
+          border: 0;
+          padding: 0;
+        }
+        .progress-bar-track.active { width: 72px; }
+        .progress-bar-fill {
+          height: 100%;
+          background: #fff;
+          border-radius: 2px;
+          transition: width 0.08s linear;
+        }
+      `}</style>
 
-            <div className="absolute inset-0 z-20 flex items-center">
-              <div className="max-w-7xl mx-auto px-4 w-full">
-                <div className="max-w-2xl">
-                  <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight">
-                    {slide.title}
-                  </h1>
-                  <p className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-6 md:mb-8 leading-relaxed">
-                    {slide.subtitle}
-                  </p>
-                  <button
-                    onClick={slide.ctaAction}
-                    className="btn-primary text-base md:text-lg px-6 md:px-8 py-3 md:py-4 bg-blue-600 hover:bg-blue-700"
-                  >
-                    {slide.cta}
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
+      <div className="relative w-full overflow-hidden">
+        <div className="relative h-[calc(100vh-5.5rem)]">
 
-        {/* Navigation Buttons */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-2 md:p-3 rounded-full transition-all duration-300"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft size={24} className="md:w-8 md:h-8" />
-        </button>
-
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-2 md:p-3 rounded-full transition-all duration-300"
-          aria-label="Next slide"
-        >
-          <ChevronRight size={24} className="md:w-8 md:h-8" />
-        </button>
-
-        {/* Dots Indicator */}
-        <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-2 md:gap-3">
-          {slides.map((_, index) => (
-            <button
+          {slides.map((slide, index) => (
+            <div
               key={index}
-              onClick={() => goToSlide(index)}
-              className={`transition-all duration-300 rounded-full ${
-                index === currentSlide
-                  ? 'bg-white h-2 md:h-3 w-8 md:w-12'
-                  : 'bg-white/50 hover:bg-white/75 h-2 md:h-3 w-2 md:w-3'
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
               }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
+            >
+              {/* Gradient: strong on left for text legibility, fades right */}
+              <div className="absolute inset-0 z-10"
+                style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.15) 100%)' }}
+              />
+
+              <img
+                src={slide.image}
+                alt={slide.title}
+                className="w-full h-full object-cover"
+                loading="eager"
+              />
+
+              {/* Corner words — right side only, never touch left content */}
+              {index === currentSlide && (
+                <CornerWords slideIndex={index} animKey={textKey} />
+              )}
+
+              {/* Left-side text content */}
+              {index === currentSlide && (
+                <div key={textKey} className="absolute inset-0 z-20 flex items-center">
+                  <div className="w-full px-6 md:px-12 lg:px-16">
+                    {/* Constrain text to left 55% so it never touches the right-side words */}
+                    <div style={{ maxWidth: '55%', minWidth: '280px' }}>
+                      <h1 className="slide-title font-bold text-white leading-tight mb-4 md:mb-6"
+                        style={{ fontSize: 'clamp(28px, 4.5vw, 68px)' }}>
+                        {slide.title}
+                      </h1>
+                      <p className="slide-subtitle text-gray-200 leading-relaxed mb-6 md:mb-8"
+                        style={{ fontSize: 'clamp(14px, 1.6vw, 22px)' }}>
+                        {slide.subtitle}
+                      </p>
+                      <button
+                        onClick={slide.ctaAction}
+                        className="slide-cta btn-primary"
+                        style={{ fontSize: 'clamp(13px, 1.1vw, 17px)', padding: '12px 28px' }}
+                      >
+                        {slide.cta}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
           ))}
+
+          {/* Prev / Next */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-3 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/35 backdrop-blur-sm text-white p-2 md:p-3 rounded-full transition-all duration-300"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft size={22} />
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute right-3 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/35 backdrop-blur-sm text-white p-2 md:p-3 rounded-full transition-all duration-300"
+            aria-label="Next slide"
+          >
+            <ChevronRight size={22} />
+          </button>
+
+          {/* Progress bar indicators */}
+          <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2 md:gap-3">
+            {slides.map((_, index) => {
+              const isActive = index === currentSlide;
+              const isDone   = index < currentSlide;
+              return (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                  className={`progress-bar-track ${isActive ? 'active' : ''}`}
+                  style={{ background: 'rgba(255,255,255,0.3)' }}
+                >
+                  <div
+                    className="progress-bar-fill"
+                    style={{ width: isActive ? `${progress}%` : isDone ? '100%' : '0%' }}
+                  />
+                </button>
+              );
+            })}
+          </div>
+
         </div>
       </div>
-    </div>
+    </>
   );
 }

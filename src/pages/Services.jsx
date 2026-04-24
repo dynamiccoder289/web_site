@@ -11,123 +11,30 @@ import {
   CheckCircle,
   ChevronRight,
 } from 'lucide-react';
+import { SERVICES_LIST, SERVICE_APPROACH_STEPS } from '../constants/servicesConstants';
+
+const SERVICE_ICONS = [
+  <FileText size={48} />,
+  <Calculator size={48} />,
+  <Shield size={48} />,
+  <BarChart3 size={48} />,
+  <FileCheck size={48} />,
+  <Building2 size={48} />,
+  <TrendingUp size={48} />,
+  <Briefcase size={48} />,
+];
 
 export default function Services({ onNavigate }) {
-  const services = [
-    {
-      icon: <FileText size={48} />,
-      title: 'Income Tax Filing & Planning',
-      description: 'Comprehensive tax services for individuals and businesses',
-      features: [
-        'Individual Income Tax Return (ITR) Filing',
-        'Corporate Tax Planning & Compliance',
-        'Tax Saving Investment Advisory',
-        'Tax Assessment & Appeal Support',
-        'Advance Tax & TDS Compliance',
-        'Capital Gains Tax Consultation',
-      ],
-    },
-    {
-      icon: <Calculator size={48} />,
-      title: 'GST Registration & Returns',
-      description: 'Complete GST compliance and advisory services',
-      features: [
-        'GST Registration for New Businesses',
-        'Monthly/Quarterly GST Return Filing',
-        'GST Input Credit Optimization',
-        'GST Audit & Reconciliation',
-        'GST Refund Processing',
-        'GST Advisory & Consultation',
-      ],
-    },
-    {
-      icon: <Shield size={48} />,
-      title: 'Statutory Audit & Internal Audit',
-      description: 'Professional audit services ensuring compliance',
-      features: [
-        'Statutory Audit as per Companies Act',
-        'Internal Audit & Control Review',
-        'Tax Audit under Income Tax Act',
-        'Bank Audit & Financial Review',
-        'Stock & Inventory Audit',
-        'Concurrent & Management Audit',
-      ],
-    },
-    {
-      icon: <BarChart3 size={48} />,
-      title: 'Accounting & Bookkeeping',
-      description: 'Accurate financial record management',
-      features: [
-        'Daily Bookkeeping & Ledger Maintenance',
-        'Financial Statement Preparation',
-        'MIS Reporting & Analysis',
-        'Payroll Processing & Management',
-        'Accounts Receivable/Payable Management',
-        'Cloud Accounting Solutions',
-      ],
-    },
-    {
-      icon: <FileCheck size={48} />,
-      title: 'TDS Compliance',
-      description: 'Complete TDS filing and return services',
-      features: [
-        'TDS Return Filing (Quarterly)',
-        'TDS Calculation & Deduction',
-        'TDS Certificate Issuance (Form 16/16A)',
-        'TDS Reconciliation Services',
-        'Lower TDS Deduction Assistance',
-        'TDS Default & Penalty Resolution',
-      ],
-    },
-    {
-      icon: <Building2 size={48} />,
-      title: 'Company / LLP Incorporation',
-      description: 'Business registration and startup services',
-      features: [
-        'Private Limited Company Registration',
-        'LLP Registration & Compliance',
-        'Partnership Firm Registration',
-        'Sole Proprietorship Setup',
-        'Director Identification Number (DIN)',
-        'Digital Signature Certificate (DSC)',
-      ],
-    },
-    {
-      icon: <TrendingUp size={48} />,
-      title: 'Financial Advisory',
-      description: 'Strategic financial planning and guidance',
-      features: [
-        'Business Financial Planning',
-        'Working Capital Management',
-        'Investment Advisory Services',
-        'Budgeting & Cash Flow Analysis',
-        'Merger & Acquisition Advisory',
-        'Business Valuation Services',
-      ],
-    },
-    {
-      icon: <Briefcase size={48} />,
-      title: 'ROC Filing & Compliance',
-      description: 'Complete corporate compliance management',
-      features: [
-        'Annual ROC Filing & Returns',
-        'Board Meeting & AGM Compliance',
-        'Share Transfer & Capital Changes',
-        'Director Appointment/Resignation',
-        'Registered Office Address Change',
-        'Company Closure & Strike Off',
-      ],
-    },
-  ];
+  const services = SERVICES_LIST.map((s, i) => ({ ...s, icon: SERVICE_ICONS[i] }));
 
   return (
     <div className="min-h-screen">
       {/* HERO */}
-      <section className="bg-gradient-to-br from-blue-900 to-blue-800 text-white py-20">
+      <section className="bg-gradient-to-br from-[var(--color-primary-dark)] to-[var(--color-primary)] text-white py-20">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-white/80">
               Comprehensive chartered accountancy services tailored to your business needs
             </p>
           </div>
@@ -148,7 +55,7 @@ export default function Services({ onNavigate }) {
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-8 card-hover">
                 <div className="flex items-start gap-4 mb-6">
-                  <div className="text-blue-600 p-3 bg-blue-50 rounded-lg flex-shrink-0">
+                <div className="text-[var(--color-primary)] p-3 bg-[var(--color-primary)]/10 rounded-lg flex-shrink-0">
                     {service.icon}
                   </div>
 
@@ -161,7 +68,7 @@ export default function Services({ onNavigate }) {
                 <div className="space-y-3">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-3">
-                      <CheckCircle size={20} className="text-blue-600 flex-shrink-0 mt-0.5" />
+                      <CheckCircle size={20} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />
                       <span className="text-gray-700">{feature}</span>
                     </div>
                   ))}
@@ -169,7 +76,7 @@ export default function Services({ onNavigate }) {
 
                 <button
                   onClick={() => onNavigate('contact')}
-                  className="mt-6 text-blue-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all"
+                  className="mt-6 text-[var(--color-primary)] font-semibold flex items-center gap-2 hover:gap-3 transition-all"
                 >
                   Get Started <ChevronRight size={18} />
                 </button>
@@ -182,14 +89,14 @@ export default function Services({ onNavigate }) {
       {/* CUSTOM SOLUTION CTA */}
       <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="bg-gradient-to-br from-blue-900 to-blue-800 rounded-2xl p-12 text-white text-center">
+          <div className="bg-gradient-to-br from-[var(--color-primary-dark)] to-[var(--color-primary)] rounded-2xl p-12 text-white text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Need a Custom Solution?</h2>
-            <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+            <p className="text-xl mb-8 text-white/80 max-w-2xl mx-auto">
               Every business is unique. Let's discuss how we can tailor our services to meet your specific requirements.
             </p>
             <button
               onClick={() => onNavigate('contact')}
-              className="btn-primary bg-white text-blue-900 hover:bg-gray-100 text-lg px-8 py-4"
+              className="btn-primary bg-white text-[var(--color-primary)] hover:bg-gray-100 text-lg px-8 py-4"
             >
               Schedule a Consultation
             </button>
@@ -208,18 +115,13 @@ export default function Services({ onNavigate }) {
           </div>
 
           <div className="grid md:grid-cols-4 gap-6">
-            {[ 'Consultation', 'Planning', 'Execution', 'Support' ].map((step, index) => (
+            {SERVICE_APPROACH_STEPS.map((step, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-md text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 font-bold text-xl">
+                <div className="w-16 h-16 bg-[var(--color-primary)]/10 rounded-full flex items-center justify-center mx-auto mb-4 text-[var(--color-primary)] font-bold text-xl">
                   {index + 1}
                 </div>
-                <h3 className="font-semibold text-lg mb-2">{step}</h3>
-                <p className="text-gray-600 text-sm">
-                  {index === 0 && 'Understanding your needs and requirements'}
-                  {index === 1 && 'Developing customized solutions and strategy'}
-                  {index === 2 && 'Implementing services with precision'}
-                  {index === 3 && 'Ongoing assistance and guidance'}
-                </p>
+                <h3 className="font-semibold text-lg mb-2">{step.label}</h3>
+                <p className="text-gray-600 text-sm">{step.description}</p>
               </div>
             ))}
           </div>

@@ -1,17 +1,26 @@
 @import "tailwindcss";
 
-
+/* ─────────────────────────────────────────────────────────────
+   Design Tokens
+   All color values mirror src/constants/colors.js — keep in sync.
+   To rebrand, change values here AND in colors.js.
+   ───────────────────────────────────────────────────────────── */
 @layer base {
   :root {
-    --color-primary: #ff8c00;
-    --color-primary-dark: #ffa500 ;
-    --color-primary-light: #3b82f6;
-    --color-secondary: #0ea5e9;
-    --color-accent: #0284c7;
-    --color-gray-50: #f8fafc;
+    /* Brand — orange palette */
+    --color-primary:       #ff8c00;  /* deep orange  — main brand */
+    --color-primary-dark:  #e07b00;  /* darker orange — hover / dark */
+    --color-primary-light: #ffb347;  /* light orange  — highlights */
+    --color-secondary:     #ffa500;  /* amber-orange  — secondary */
+    --color-accent:        #ff6f00;  /* burnt orange  — strong accent */
+
+    /* Grays (Slate scale) */
+    --color-gray-50:  #f8fafc;
     --color-gray-100: #f1f5f9;
     --color-gray-200: #e2e8f0;
     --color-gray-300: #cbd5e1;
+    --color-gray-500: #64748b;
+    --color-gray-600: #475569;
     --color-gray-700: #334155;
     --color-gray-800: #1e293b;
     --color-gray-900: #0f172a;
@@ -27,39 +36,29 @@
     font-weight: 600;
     color: var(--color-gray-900);
   }
-
-  h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-  }
-
-  h2 {
-    font-size: 2rem;
-    line-height: 1.3;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-    line-height: 1.4;
-  }
 }
 
+/* ─────────────────────────────────────────────────────────────
+   Reusable Utilities
+   ───────────────────────────────────────────────────────────── */
 @layer utilities {
+  /* Primary button */
   .btn-primary {
     background-color: var(--color-primary);
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   }
 
   .btn-primary:hover {
     background-color: var(--color-primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px rgba(30, 64, 175, 0.3);
+    box-shadow: 0 10px 25px -5px rgba(255, 140, 0, 0.35);
   }
 
+  /* Secondary / outline button */
   .btn-secondary {
     background-color: white;
     color: var(--color-primary);
@@ -67,7 +66,7 @@
     border-radius: 0.5rem;
     border: 2px solid var(--color-primary);
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
   }
 
   .btn-secondary:hover {
@@ -76,16 +75,18 @@
     transform: translateY(-2px);
   }
 
+  /* Section spacing */
   .section-padding {
     padding: 5rem 1rem;
   }
 
+  /* Card lift on hover */
   .card-hover {
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .card-hover:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px -10px rgba(30, 64, 175, 0.2);
+    box-shadow: 0 20px 40px -10px rgba(255, 140, 0, 0.2);
   }
 }

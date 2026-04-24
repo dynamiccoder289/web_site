@@ -1,263 +1,17 @@
-// import { Building2, Award, Globe, Users, Target } from "lucide-react";
-
-// export default function TheFirm() {
-//   const milestones = [
-//     { year: "2023", event: "Excel Associates Conceptualized" },
-//     { year: "2024", event: "Firm Officially Launched" },
-//     { year: "2024", event: "First 50+ Clients Onboarded" },
-//     { year: "2024", event: "Digital Operations & Advisory Expansion" },
-//     { year: "2025", event: "Serving Clients Across Multiple Cities" },
-//   ];
-
-//   const capabilities = [
-//     {
-//       icon: <Building2 size={40} />,
-//       title: "Modern Full-Service Firm",
-//       description:
-//         "Integrated accounting, taxation, compliance, and advisory solutions under one roof",
-//     },
-//     {
-//       icon: <Users size={40} />,
-//       title: "Young & Expert Team",
-//       description:
-//         "Dynamic chartered accountants with strong domain & regulatory expertise",
-//     },
-//     {
-//       icon: <Globe size={40} />,
-//       title: "Digital-First Presence",
-//       description:
-//         "Serving clients remotely across India using modern digital infrastructure",
-//     },
-//     {
-//       icon: <Award size={40} />,
-//       title: "Highest Professional Ethics",
-//       description:
-//         "Strong commitment to transparency, confidentiality, and compliance excellence",
-//     },
-//   ];
-
-//   return (
-//     <div className="min-h-screen">
-//       {/* ✅ HERO SECTION WITH IMAGE + ABOUT US CONTEXT */}
-//       <section
-//         className="relative py-28 bg-center bg-cover"
-//         style={{
-//           backgroundImage:
-//             "url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1600')",
-//         }}
-//       >
-//         {/* Overlay */}
-//         <div className="absolute inset-0 bg-black/70"></div>
-
-//         <div className="relative max-w-7xl mx-auto px-4 text-center">
-//           <span className="inline-block mb-4 px-4 py-1 text-xs tracking-widest uppercase rounded-full bg-[var(--color-primary)] text-white">
-//             About Us
-//           </span>
-
-//           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-//             The Firm – Excel Associates
-//           </h1>
-
-//           <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-//             A modern chartered accountancy firm built on trust, ethics, and
-//             technology-driven professional services.
-//           </p>
-//         </div>
-//       </section>
-
-//       {/* ✅ WHO WE ARE */}
-//       <section className="section-padding bg-white">
-//         <div className="max-w-7xl mx-auto px-4">
-//           <div className="grid lg:grid-cols-2 gap-12 items-center">
-//             <div>
-//               <h2 className="text-3xl md:text-4xl font-bold mb-6">Who We Are</h2>
-//               <div className="space-y-4 text-gray-700 leading-relaxed">
-//                 <p>
-//                   Excel Associates is a professionally managed chartered
-//                   accountancy firm established with the vision of delivering
-//                   reliable, ethical, and growth-driven financial solutions to
-//                   businesses across India.
-//                 </p>
-//                 <p>
-//                   Though we are a newly established firm, our leadership and
-//                   core advisory team bring together strong industry exposure,
-//                   regulatory expertise, and hands-on experience across multiple
-//                   domains.
-//                 </p>
-//                 <p>
-//                   We serve startups, MSMEs, corporates, and professionals in
-//                   areas including taxation, audit, corporate compliance,
-//                   business advisory, and financial structuring.
-//                 </p>
-//               </div>
-//             </div>
-
-//             <div>
-//               <img
-//                 src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800"
-//                 alt="Excel Associates Office"
-//                 className="rounded-xl shadow-2xl w-full"
-//               />
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* ✅ OUR CAPABILITIES */}
-//       <section className="section-padding bg-gray-50">
-//         <div className="max-w-7xl mx-auto px-4">
-//           <div className="text-center mb-12">
-//             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-//               Our Capabilities
-//             </h2>
-//             <p className="text-gray-600 max-w-2xl mx-auto">
-//               Comprehensive solutions backed by qualification, compliance, and
-//               commitment
-//             </p>
-//           </div>
-
-//           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-//             {capabilities.map((item, index) => (
-//               <div
-//                 key={index}
-//                 className="bg-white p-6 rounded-xl shadow-md text-center card-hover"
-//               >
-//                 <div className="inline-block p-4 bg-[var(--color-gray-50)] rounded-full text-[var(--color-primary)] mb-4">
-//                   {item.icon}
-//                 </div>
-//                 <h3 className="text-xl font-semibold mb-3">
-//                   {item.title}
-//                 </h3>
-//                 <p className="text-gray-600">{item.description}</p>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* ✅ OUR JOURNEY (RECENTLY STARTED TIMELINE) */}
-//       <section className="section-padding bg-white">
-//         <div className="max-w-5xl mx-auto px-4">
-//           <div className="text-center mb-12">
-//             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-//               Our Journey
-//             </h2>
-//             <p className="text-gray-600">
-//               Key milestones in our evolving growth story
-//             </p>
-//           </div>
-
-//           <div className="relative">
-//             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200"></div>
-
-//             <div className="space-y-12">
-//               {milestones.map((milestone, index) => (
-//                 <div
-//                   key={index}
-//                   className={`flex items-center ${
-//                     index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-//                   }`}
-//                 >
-//                   <div
-//                     className={`w-1/2 ${
-//                       index % 2 === 0
-//                         ? "pr-8 text-right"
-//                         : "pl-8 text-left"
-//                     }`}
-//                   >
-//                     <div className="bg-white p-6 rounded-xl shadow-lg inline-block">
-//                       <div className="text-2xl font-bold text-blue-600 mb-2">
-//                         {milestone.year}
-//                       </div>
-//                       <p className="text-gray-700">{milestone.event}</p>
-//                     </div>
-//                   </div>
-
-//                   <div className="w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow-lg z-10"></div>
-
-//                   <div className="w-1/2"></div>
-//                 </div>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* ✅ OUR COMMITMENT */}
-//       <section className="section-padding bg-blue-900 text-white">
-//         <div className="max-w-4xl mx-auto px-4 text-center">
-//           <Target size={48} className="mx-auto mb-6 text-white" />
-//           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-//             Our Commitment
-//           </h2>
-//           <p className="text-xl text-blue-100 leading-relaxed">
-//             We are committed to building long-term professional relationships
-//             through integrity, consistency, quality service, and digitally
-//             enabled advisory solutions that empower our clients’ financial
-//             growth.
-//           </p>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// }
-
-
 import { Building2, Award, Globe, TrendingUp, Users, Target, Clock, Shield, Brain, Rocket } from 'lucide-react';
+import { FIRM_MILESTONES, FIRM_CAPABILITIES, FOUNDING_PRINCIPLES, FIRM_HERO_STATS, FIRM_IMAGES } from '../constants/theFirmConstants';
+
+const CAPABILITY_ICONS = [
+  <Rocket size={40} />,
+  <Brain size={40} />,
+  <Shield size={40} />,
+  <Clock size={40} />,
+];
 
 export default function TheFirm() {
-  const milestones = [
-    { year: '2024', event: 'Excel Associates Founded', description: 'Launch of our modern accounting practice with cutting-edge technology' },
-    { year: '2024', event: 'Digital-First Approach', description: 'Implementation of cloud-based accounting solutions from day one' },
-    { year: '2025', event: 'Core Team Assembly', description: 'Onboarding of specialized chartered accountants and advisors' },
-    { year: '2025', event: 'Client Foundation Phase', description: 'Building our initial portfolio with select visionary clients' },
-    { year: '2026', event: 'Service Expansion', description: 'Planned diversification into specialized advisory services' },
-  ];
-
-  const capabilities = [
-    {
-      icon: <Rocket size={40} />,
-      title: 'Forward-Thinking Approach',
-      description: 'Leveraging modern technology and innovative solutions for contemporary business challenges',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: <Brain size={40} />,
-      title: 'Strategic Mindset',
-      description: 'Combining traditional accounting expertise with strategic business insights',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: <Shield size={40} />,
-      title: 'Integrity & Transparency',
-      description: 'Building trust through clear communication and ethical practices from day one',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: <Clock size={40} />,
-      title: 'Agile Operations',
-      description: 'Flexible, responsive service model adapting to evolving client needs',
-      color: 'from-orange-500 to-red-500'
-    },
-  ];
-
-  const foundingPrinciples = [
-    {
-      title: "Innovation in Tradition",
-      description: "We respect traditional accounting principles while embracing technological innovation to deliver superior value.",
-      icon: "💡"
-    },
-    {
-      title: "Client Partnership",
-      description: "We view every client relationship as a long-term partnership focused on mutual growth and success.",
-      icon: "🤝"
-    },
-    {
-      title: "Excellence as Standard",
-      description: "We set high standards for ourselves, ensuring quality and accuracy in every deliverable.",
-      icon: "⭐"
-    }
-  ];
+  const milestones = FIRM_MILESTONES;
+  const capabilities = FIRM_CAPABILITIES.map((c, i) => ({ ...c, icon: CAPABILITY_ICONS[i] }));
+  const foundingPrinciples = FOUNDING_PRINCIPLES;
 
   return (
     <div className="min-h-screen">
@@ -291,18 +45,12 @@ export default function TheFirm() {
               </p>
               
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <div className="text-2xl font-bold text-[var(--color-primary)]">2024</div>
-                  <div className="text-sm">Year Founded</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <div className="text-2xl font-bold text-[var(--color-primary)]">New</div>
-                  <div className="text-sm">Modern Approach</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <div className="text-2xl font-bold text-[var(--color-primary)]">Vision</div>
-                  <div className="text-sm">Driven</div>
-                </div>
+                {FIRM_HERO_STATS.map((stat, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                    <div className="text-2xl font-bold text-[var(--color-primary)]">{stat.value}</div>
+                    <div className="text-sm">{stat.label}</div>
+                  </div>
+                ))}
               </div>
             </div>
             
@@ -310,7 +58,7 @@ export default function TheFirm() {
             <div className="lg:w-1/2">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
                 <img 
-                  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" 
+                  src={FIRM_IMAGES.hero}
                   alt="Excel Associates Modern Office - New Chartered Accountancy Firm"
                   className="w-full h-[400px] md:h-[500px] object-cover"
                 />
@@ -374,7 +122,7 @@ export default function TheFirm() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   // src="https://images.unsplash.com/photo-1551836026-d5c2c0b4d9a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                 src={FIRM_IMAGES.story}
                   alt="Excel Associates Founding Team - Modern Financial Services"
                   className="w-full h-[500px] object-cover"
                 />
