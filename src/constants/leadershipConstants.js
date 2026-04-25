@@ -7,7 +7,7 @@ export const LEADERS = [
     image:
       'https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     specialization: 'Corporate Tax, Statutory Audit, Business Strategy',
-    bio: 'Founded Excel Associates with a vision to create a world-class financial services firm that combines traditional expertise with modern solutions. With over two decades of experience, he has guided corporations through complex financial landscapes, specializing in tax optimization and strategic business advisory.',
+    bio: 'Founded Somasekhara & Associates with a vision to create a world-class financial services firm that combines traditional expertise with modern solutions. With over two decades of experience, he has guided corporations through complex financial landscapes, specializing in tax optimization and strategic business advisory.',
     education: [
       'B.Com, University of Mumbai',
       'Chartered Accountancy, ICAI',
@@ -20,7 +20,7 @@ export const LEADERS = [
       'Pioneered digital transformation in traditional accounting',
     ],
     expertise: ['Tax Planning & Strategy', 'Mergers & Acquisitions', 'Financial Restructuring', 'Risk Management'],
-    contact: 'rajesh.mehta@excelassociates.in',
+    contact: 'rajesh.mehta@somasekharaassociates.in',
   },
   {
     name: 'CA Priya Verma',
@@ -43,7 +43,7 @@ export const LEADERS = [
       'Mentor for women in finance initiatives',
     ],
     expertise: ['GST Advisory', 'Financial Modeling', 'Business Valuation', 'Regulatory Compliance'],
-    contact: 'priya.verma@excelassociates.in',
+    contact: 'priya.verma@somasekharaassociates.in',
   },
   {
     name: 'CA Amit Singh',
@@ -66,7 +66,7 @@ export const LEADERS = [
       'Developed proprietary financial frameworks for startups',
     ],
     expertise: ['Fundraising Strategy', 'Startup Finance', 'Investor Relations', 'Growth Planning'],
-    contact: 'amit.singh@excelassociates.in',
+    contact: 'amit.singh@somasekharaassociates.in',
   },
 ];
 
@@ -94,7 +94,7 @@ export const LEADERSHIP_PRINCIPLES = [
 ];
 
 export const LEADERSHIP_STATS = [
-  { value: '50+', label: 'Combined Years Experience' },
+  { value: '5+', label: 'Combined Years Experience' },
   { value: '3', label: 'Expert Partners' },
-  { value: '500+', label: 'Clients Guided' },
+  { value: '50+', label: 'Clients Guided' },
 ];

@@ -29,7 +29,7 @@ export default function TheFirm() {
             <div className="lg:w-1/2 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
                 <div className="w-2 h-2 bg-[var(--color-primary)] rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium">New Beginnings • Founded 2024</span>
+                <span className="text-sm font-medium">New Beginnings • Founded 2025</span>
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -40,7 +40,7 @@ export default function TheFirm() {
               </h1>
               
               <p className="text-xl text-white/90 mb-8 max-w-2xl">
-                A modern chartered accountancy practice founded in 2024 with a vision to redefine 
+                A modern chartered accountancy practice founded in 2025 with a vision to redefine 
                 financial services through innovation, integrity, and exceptional client experience.
               </p>
               
@@ -59,7 +59,7 @@ export default function TheFirm() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
                 <img 
                   src={FIRM_IMAGES.hero}
-                  alt="Excel Associates Modern Office - New Chartered Accountancy Firm"
+                  alt="Somasekhara & Associates Modern Office - New Chartered Accountancy Firm"
                   className="w-full h-[400px] md:h-[500px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-gray-900)]/70 to-transparent"></div>
@@ -90,7 +90,7 @@ export default function TheFirm() {
               </h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  Excel Associates was founded in 2024 by a group of visionary chartered accountants who recognized 
+                  Somasekhara & Associates was founded in 2025 by a group of visionary chartered accountants who recognized 
                   the need for a modern approach to financial services. We saw an opportunity to create a firm that 
                   combines traditional accounting excellence with contemporary technology and client-centric service.
                 </p>
@@ -123,7 +123,7 @@ export default function TheFirm() {
                 <img
                   // src="https://images.unsplash.com/photo-1551836026-d5c2c0b4d9a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
                  src={FIRM_IMAGES.story}
-                  alt="Excel Associates Founding Team - Modern Financial Services"
+                  alt="Somasekhara & Associates Founding Team - Modern Financial Services"
                   className="w-full h-[500px] object-cover"
                 />
               </div>
@@ -197,22 +197,22 @@ export default function TheFirm() {
                 <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12 text-right' : 'pl-12 text-left'}`}>
                     <div className={`inline-block p-6 rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 ${
-                      milestone.year === '2024' 
+                      milestone.year === '2025' 
                         ? 'bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] text-white'
                         : 'bg-white'
                     }`}>
                       <div className={`text-2xl font-bold mb-2 ${
-                        milestone.year === '2024' ? 'text-white' : 'text-[var(--color-primary)]'
+                        milestone.year === '2025' ? 'text-white' : 'text-[var(--color-primary)]'
                       }`}>
                         {milestone.year}
                       </div>
                       <h4 className={`text-lg font-semibold mb-2 ${
-                        milestone.year === '2024' ? 'text-white' : 'text-gray-900'
+                        milestone.year === '2025' ? 'text-white' : 'text-gray-900'
                       }`}>
                         {milestone.event}
                       </h4>
                       <p className={`text-sm ${
-                        milestone.year === '2024' ? 'text-white/90' : 'text-gray-600'
+                        milestone.year === '2025' ? 'text-white/90' : 'text-gray-600'
                       }`}>
                         {milestone.description}
                       </p>
@@ -221,7 +221,7 @@ export default function TheFirm() {
 
                   {/* Timeline dot */}
                   <div className={`w-6 h-6 rounded-full border-4 border-white shadow-lg z-10 ${
-                    milestone.year === '2024' 
+                    milestone.year === '2025' 
                       ? 'bg-[var(--color-primary)] animate-pulse' 
                       : 'bg-[var(--color-secondary)]'
                   }`}></div>
@@ -250,7 +250,7 @@ export default function TheFirm() {
             <p className="text-2xl font-medium italic mb-4">
               "We may be new, but our standards are timeless. Excellence is not just our goal—it's our starting point."
             </p>
-            <p className="text-white/80">— The Excel Associates Team</p>
+            <p className="text-white/80">— The Somasekhara & Associates Team</p>
           </div>
         </div>
       </section>

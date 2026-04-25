@@ -7,7 +7,7 @@ export const TEAM_MEMBERS = [
     image:
       'https://images.pexels.com/photos/3823488/pexels-photo-3823488.jpeg?auto=compress&cs=tinysrgb&w=400',
     specialization: 'Statutory Audit, Internal Controls',
-    email: 'anita.deshmukh@excelassociates.com',
+    email: 'anita.deshmukh@somasekharaassociates.in',
   },
   {
     name: 'CA Karan Joshi',
@@ -17,7 +17,7 @@ export const TEAM_MEMBERS = [
     image:
       'https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=400',
     specialization: 'Income Tax, GST Compliance',
-    email: 'karan.joshi@excelassociates.com',
+    email: 'karan.joshi@somasekharaassociates.in',
   },
   {
     name: 'CA Neha Reddy',
@@ -27,7 +27,7 @@ export const TEAM_MEMBERS = [
     image:
       'https://images.pexels.com/photos/3831645/pexels-photo-3831645.jpeg?auto=compress&cs=tinysrgb&w=400',
     specialization: 'Financial Planning, Startups',
-    email: 'neha.reddy@excelassociates.com',
+    email: 'neha.reddy@somasekharaassociates.in',
   },
   {
     name: 'Rohit Sharma',
@@ -37,7 +37,7 @@ export const TEAM_MEMBERS = [
     image:
       'https://images.pexels.com/photos/3778212/pexels-photo-3778212.jpeg?auto=compress&cs=tinysrgb&w=400',
     specialization: 'Tax Audit, Compliance',
-    email: 'rohit.sharma@excelassociates.com',
+    email: 'rohit.sharma@somasekharaassociates.in',
   },
   {
     name: 'Priyanka Nair',
@@ -47,7 +47,7 @@ export const TEAM_MEMBERS = [
     image:
       'https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=400',
     specialization: 'GST Returns, Advisory',
-    email: 'priyanka.nair@excelassociates.com',
+    email: 'priyanka.nair@somasekharaassociates.in',
   },
   {
     name: 'Vikram Malhotra',
@@ -57,7 +57,7 @@ export const TEAM_MEMBERS = [
     image:
       'https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=400',
     specialization: 'Bookkeeping, MIS Reports',
-    email: 'vikram.malhotra@excelassociates.com',
+    email: 'vikram.malhotra@somasekharaassociates.in',
   },
   {
     name: 'Sneha Kapoor',
@@ -67,7 +67,7 @@ export const TEAM_MEMBERS = [
     image:
       'https://images.pexels.com/photos/3812011/pexels-photo-3812011.jpeg?auto=compress&cs=tinysrgb&w=400',
     specialization: 'ROC Filing, TDS',
-    email: 'sneha.kapoor@excelassociates.com',
+    email: 'sneha.kapoor@somasekharaassociates.in',
   },
   {
     name: 'Aditya Patel',
@@ -77,7 +77,7 @@ export const TEAM_MEMBERS = [
     image:
       'https://images.pexels.com/photos/3760790/pexels-photo-3760790.jpeg?auto=compress&cs=tinysrgb&w=400',
     specialization: 'Data Entry, Documentation',
-    email: 'aditya.patel@excelassociates.com',
+    email: 'aditya.patel@somasekharaassociates.in',
   },
 ];
 
@@ -125,9 +125,9 @@ export const CULTURE_VALUES = [
 ];
 
 export const TEAM_STATS = [
-  { label: 'Total Members', value: '36+' },
-  { label: 'Chartered Accountants', value: '8' },
-  { label: 'Years Combined Experience', value: '95+' },
+  { label: 'Total Members', value: '8+' },
+  { label: 'Chartered Accountants', value: '2' },
+  { label: 'Years Combined Experience', value: '5+' },
   { label: 'Client Satisfaction', value: '98%' },
 ];
 

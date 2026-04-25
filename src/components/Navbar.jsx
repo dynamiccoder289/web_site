@@ -258,7 +258,7 @@ export default function Navbar({ currentPage, onNavigate }) {
                   </div>
                   <div className="flex items-center gap-2">
                     <Mail className="w-4 h-4 text-[var(--color-primary)]" />
-                    <span>info@excelassociates.in</span>
+                    <span>info@somasekharaassociates.in</span>
                   </div>
                 </div>
               </div>

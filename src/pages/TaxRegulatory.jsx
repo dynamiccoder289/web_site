@@ -21,6 +21,7 @@ import {
   TAX_IMPORTANT_POINTS,
   TAX_IMAGES,
 } from "../constants/taxRegulatoryConstants";
+import { WHATSAPP_URLS } from "../constants/whatsappConstants";
 
 const SERVICE_ICONS = [
   <FileText size={40} />,
@@ -242,9 +243,14 @@ export default function TaxRegulatory() {
             Let our experienced team handle your tax and regulatory requirements while you focus on growing your business
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-[var(--color-primary)] font-semibold px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+            <a 
+              href={WHATSAPP_URLS.TAX}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-[var(--color-primary)] font-semibold px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-300 inline-block"
+            >
               Schedule Tax Consultation
-            </button>
+            </a>
             <button className="border border-white/30 text-white font-semibold px-8 py-3 rounded-lg hover:bg-white/10 transition-colors duration-300">
               Download Tax Guide
             </button>

@@ -30,8 +30,14 @@ const STAT_ICONS = [Users, Award, Calendar, Target];
 
 export default function OurTeam() {
   const teamMembers = TEAM_MEMBERS;
-  const departments = DEPARTMENTS.map((d, i) => ({ ...d, icon: DEPT_ICONS[i] }));
-  const cultureValues = CULTURE_VALUES.map((c, i) => ({ ...c, icon: CULTURE_ICONS[i] }));
+  const departments = DEPARTMENTS.map((d, i) => ({
+    ...d,
+    icon: DEPT_ICONS[i],
+  }));
+  const cultureValues = CULTURE_VALUES.map((c, i) => ({
+    ...c,
+    icon: CULTURE_ICONS[i],
+  }));
   const teamStats = TEAM_STATS.map((s, i) => ({ ...s, icon: STAT_ICONS[i] }));
   const whyJoinUs = WHY_JOIN_US;
 
@@ -47,9 +53,15 @@ export default function OurTeam() {
               Talented professionals committed to your success
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <span className="bg-white/10 px-4 py-2 rounded-full text-sm">36+ Team Members</span>
-              <span className="bg-white/10 px-4 py-2 rounded-full text-sm">8 Chartered Accountants</span>
-              <span className="bg-white/10 px-4 py-2 rounded-full text-sm">95+ Years Experience</span>
+              <span className="bg-white/10 px-4 py-2 rounded-full text-sm">
+                8+ Team Members
+              </span>
+              <span className="bg-white/10 px-4 py-2 rounded-full text-sm">
+                2 Chartered Accountants
+              </span>
+              <span className="bg-white/10 px-4 py-2 rounded-full text-sm">
+                5+ Years Experience
+              </span>
             </div>
           </div>
         </div>
@@ -64,7 +76,9 @@ export default function OurTeam() {
                 <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 text-[var(--color-primary)] mb-3">
                   <stat.icon size={24} />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">{stat.value}</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                  {stat.value}
+                </h3>
                 <p className="text-gray-500 text-sm">{stat.label}</p>
               </div>
             ))}
@@ -73,7 +87,7 @@ export default function OurTeam() {
       </section>
 
       {/* Team Members Section */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Meet Our Professionals</h2>
@@ -104,29 +118,40 @@ export default function OurTeam() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Departments Section */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Our Departments</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Specialized teams dedicated to different service areas</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+              Our Departments
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Specialized teams dedicated to different service areas
+            </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-6">
             {departments.map((dept, index) => (
-              <div key={index} className="bg-gray-50 border border-gray-200 rounded-xl p-6 text-center hover:shadow-md transition-shadow">
-                <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${dept.color} text-white mb-4`}>
+              <div
+                key={index}
+                className="bg-gray-50 border border-gray-200 rounded-xl p-6 text-center hover:shadow-md transition-shadow"
+              >
+                <div
+                  className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${dept.color} text-white mb-4`}
+                >
                   {dept.icon}
                 </div>
-                <h3 className="text-lg font-bold mb-2 text-gray-900">{dept.name}</h3>
+                <h3 className="text-lg font-bold mb-2 text-gray-900">
+                  {dept.name}
+                </h3>
                 <p className="text-gray-500 text-sm">{dept.count}</p>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Culture Section */}
       <section className="py-16 bg-gray-50">
@@ -141,22 +166,32 @@ export default function OurTeam() {
             </div>
 
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Our Culture</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                Our Culture
+              </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                At Excel Associates, we believe our people are our greatest asset. We foster a culture
-                that values excellence, integrity, collaboration, and continuous learning.
+                At Somasekhara & Associates, we believe our people are our greatest
+                asset. We foster a culture that values excellence, integrity,
+                collaboration, and continuous learning.
               </p>
 
               <div className="space-y-4">
                 {cultureValues.map((item, index) => (
-                  <div key={index} className="bg-white border border-gray-200 p-4 rounded-xl hover:shadow-sm transition-shadow">
+                  <div
+                    key={index}
+                    className="bg-white border border-gray-200 p-4 rounded-xl hover:shadow-sm transition-shadow"
+                  >
                     <div className="flex items-start gap-4">
                       <div className="p-2 bg-[var(--color-primary)]/10 rounded-lg text-[var(--color-primary)]">
                         <item.icon size={20} />
                       </div>
                       <div>
-                        <h3 className="font-bold text-lg mb-1 text-gray-900">{item.title}</h3>
-                        <p className="text-gray-600 text-sm">{item.description}</p>
+                        <h3 className="font-bold text-lg mb-1 text-gray-900">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-600 text-sm">
+                          {item.description}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -172,11 +207,19 @@ export default function OurTeam() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Why Join Our Team?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                Why Join Our Team?
+              </h2>
               <div className="space-y-4">
                 {whyJoinUs.map((item, index) => (
-                  <div key={index} className="flex items-start gap-3 bg-gray-50 p-4 rounded-xl border border-gray-200">
-                    <CheckCircle size={20} className="text-green-500 flex-shrink-0 mt-0.5" />
+                  <div
+                    key={index}
+                    className="flex items-start gap-3 bg-gray-50 p-4 rounded-xl border border-gray-200"
+                  >
+                    <CheckCircle
+                      size={20}
+                      className="text-green-500 flex-shrink-0 mt-0.5"
+                    />
                     <span className="text-gray-700">{item}</span>
                   </div>
                 ))}
@@ -186,12 +229,19 @@ export default function OurTeam() {
             <div>
               <div className="bg-[var(--color-primary)]/5 border border-[var(--color-primary)]/20 rounded-xl p-8">
                 <div className="flex items-start gap-4">
-                  <GraduationCap size={32} className="text-[var(--color-primary)] flex-shrink-0" />
+                  <GraduationCap
+                    size={32}
+                    className="text-[var(--color-primary)] flex-shrink-0"
+                  />
                   <div>
-                    <h3 className="font-bold text-xl mb-3 text-gray-900">Grow With Us</h3>
+                    <h3 className="font-bold text-xl mb-3 text-gray-900">
+                      Grow With Us
+                    </h3>
                     <p className="text-gray-600 mb-4">
-                      We're always looking for talented, driven professionals to join our growing team.
-                      If you're passionate about accounting, finance, and client service, we'd love to hear from you.
+                      We're always looking for talented, driven professionals to
+                      join our growing team. If you're passionate about
+                      accounting, finance, and client service, we'd love to hear
+                      from you.
                     </p>
                     <button className="inline-flex items-center gap-2 text-[var(--color-primary)] font-semibold hover:gap-3 transition-all">
                       View Open Positions <ArrowRight size={16} />
@@ -209,8 +259,9 @@ export default function OurTeam() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Our Team</h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            We are always looking for talented, driven professionals to join our growing team. If you are
-            passionate about accounting, finance, and client service, we would love to hear from you.
+            We are always looking for talented, driven professionals to join our
+            growing team. If you are passionate about accounting, finance, and
+            client service, we would love to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-[var(--color-primary)] font-semibold px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">

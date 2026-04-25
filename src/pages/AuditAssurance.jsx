@@ -19,6 +19,7 @@ import {
   AUDIT_HERO_TAGS,
   AUDIT_IMAGE,
 } from "../constants/auditAssuranceConstants";
+import { WHATSAPP_URLS } from "../constants/whatsappConstants";
 
 const SERVICE_ICONS = [
   <Shield size={40} />,
@@ -227,9 +228,14 @@ export default function AuditAssurance() {
             operations
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-[var(--color-primary)] font-semibold px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+            <a 
+              href={WHATSAPP_URLS.AUDIT}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-[var(--color-primary)] font-semibold px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-300 inline-block"
+            >
               Start Your Audit
-            </button>
+            </a>
             <button className="border border-white/30 text-white font-semibold px-8 py-3 rounded-lg hover:bg-white/10 transition-colors duration-300">
               Download Audit Checklist
             </button>

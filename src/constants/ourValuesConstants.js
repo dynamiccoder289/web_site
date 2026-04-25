@@ -86,11 +86,11 @@ export const VALUE_PILLARS = [
 
 export const VALUES_HERO_STATS = [
   { value: '6', label: 'Core Values' },
-  { value: '15+', label: 'Years Upholding' },
+  { value: '3+', label: 'Years Upholding' },
   { value: '100%', label: 'Commitment' },
 ];
 
 export const VALUES_LIVING_STATS = [
-  { value: '500+', label: 'Value-Based Client Success Stories' },
+  { value: '50+', label: 'Value-Based Client Success Stories' },
   { value: '24/7', label: 'Ethical Practice Commitment' },
 ];

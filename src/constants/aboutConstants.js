@@ -26,8 +26,8 @@ export const ABOUT_TEAM = [
 ];
 
 export const ABOUT_ACHIEVEMENTS = [
-  { number: '500+', label: 'Clients Served' },
-  { number: '15+', label: 'Years of Excellence' },
+  { number: '50+', label: 'Clients Served' },
+  { number: '3+', label: 'Years of Excellence' },
   { number: '5000+', label: 'Returns Filed' },
   { number: '100%', label: 'Success Rate' },
 ];

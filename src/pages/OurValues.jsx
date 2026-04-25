@@ -144,7 +144,7 @@ export default function OurValues() {
               </h2>
               <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p>
-                  At Excel Associates, our values are not just corporate statements—they are living principles 
+                  At Somasekhara & Associates, our values are not just corporate statements—they are living principles 
                   that shape our daily operations, decision-making processes, and client relationships.
                 </p>
                 <p>
@@ -171,7 +171,7 @@ export default function OurValues() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
-                  alt="Excel Associates Team Living Our Values - Professional Ethical Practice"
+                  alt="Somasekhara & Associates Team Living Our Values - Professional Ethical Practice"
                   className="w-full h-[500px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent"></div>

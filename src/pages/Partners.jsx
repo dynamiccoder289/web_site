@@ -193,7 +193,7 @@ export default function Partners() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Become a Partner</h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Interested in partnering with Excel Associates? We are always open to collaborating with
+            Interested in partnering with Somasekhara & Associates? We are always open to collaborating with
             organizations that share our commitment to excellence and client service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

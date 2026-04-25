@@ -1,4 +1,17 @@
-import { Award, Building2, TrendingUp, Users, Globe, CheckCircle, Star, Clock, Target, Briefcase, ChevronRight, Trophy } from 'lucide-react';
+import {
+  Award,
+  Building2,
+  TrendingUp,
+  Users,
+  Globe,
+  CheckCircle,
+  Star,
+  Clock,
+  Target,
+  Briefcase,
+  ChevronRight,
+  Trophy,
+} from "lucide-react";
 import {
   EXPERIENCE_STATS,
   INDUSTRIES,
@@ -6,7 +19,7 @@ import {
   TESTIMONIALS,
   RECOGNITIONS,
   EXPERIENCE_HERO_STATS,
-} from '../constants/experienceConstants';
+} from "../constants/experienceConstants";
 
 const STAT_ICONS = [
   <Award size={40} />,
@@ -26,60 +39,63 @@ export default function Experience() {
     <div className="min-h-screen">
       {/* Hero Section with Background Design */}
 
-<section
-  className="relative overflow-hidden text-white py-10 md:py-14 bg-center bg-cover"
-  style={{
-    backgroundImage:
-      "url('https://images.pexels.com/photos/3184635/pexels-photo-3184635.jpeg?auto=compress&cs=tinysrgb&w=1920')",
-  }}
->
-  {/* ✅ Dark Brand Gradient Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-gray-900)]/90 to-[var(--color-primary-dark)]/30"></div>
+      <section
+        className="relative overflow-hidden text-white py-10 md:py-14 bg-center bg-cover"
+        style={{
+          backgroundImage:
+            "url('https://images.pexels.com/photos/3184635/pexels-photo-3184635.jpeg?auto=compress&cs=tinysrgb&w=1920')",
+        }}
+      >
+        {/* ✅ Dark Brand Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-gray-900)]/90 to-[var(--color-primary-dark)]/30"></div>
 
-  {/* ✅ Decorative Glow Effects (slightly reduced size for compact look) */}
-  <div className="absolute inset-0 opacity-10">
-    <div className="absolute top-12 left-8 w-72 h-72 bg-[var(--color-primary)] rounded-full mix-blend-overlay blur-3xl"></div>
-    <div className="absolute bottom-12 right-8 w-64 h-64 bg-[var(--color-secondary)] rounded-full mix-blend-overlay blur-3xl"></div>
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-white/5 rounded-full"></div>
-  </div>
+        {/* ✅ Decorative Glow Effects (slightly reduced size for compact look) */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-12 left-8 w-72 h-72 bg-[var(--color-primary)] rounded-full mix-blend-overlay blur-3xl"></div>
+          <div className="absolute bottom-12 right-8 w-64 h-64 bg-[var(--color-secondary)] rounded-full mix-blend-overlay blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-white/5 rounded-full"></div>
+        </div>
 
-  <div className="max-w-7xl mx-auto px-4 relative z-10">
-    <div className="text-center max-w-4xl mx-auto">
-      {/* ✅ Badge (reduced spacing) */}
-      <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 mb-5">
-        <Award className="w-4 h-4 text-[var(--color-primary)]" />
-        <span className="text-xs font-medium tracking-wide">
-          Trusted Since 2008
-        </span>
-      </div>
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            {/* ✅ Badge (reduced spacing) */}
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 mb-5">
+              <Award className="w-4 h-4 text-[var(--color-primary)]" />
+              <span className="text-xs font-medium tracking-wide">
+                Trusted Since 2025
+              </span>
+            </div>
 
-      {/* ✅ Headings (reduced bottom margins) */}
-      <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-        Our
-        <span className="block text-[var(--color-primary)] mt-1">
-          Experience
-        </span>
-      </h1>
+            {/* ✅ Headings (reduced bottom margins) */}
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+              Our
+              <span className="block text-[var(--color-primary)] mt-1">
+                Experience
+              </span>
+            </h1>
 
-      <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-6">
-        Delivering reliable accounting, taxation, and business advisory services
-        with precision, integrity, and client-focused excellence
-      </p>
+            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-6">
+              Delivering reliable accounting, taxation, and business advisory
+              services with precision, integrity, and client-focused excellence
+            </p>
 
-      {/* ✅ Stats (reduced padding & spacing) */}
-      <div className="flex flex-wrap justify-center gap-3">
-        {EXPERIENCE_HERO_STATS.map((stat, index) => (
-          <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 min-w-[120px]">
-            <div className="text-2xl font-bold text-[var(--color-primary)]">{stat.value}</div>
-            <div className="text-xs">{stat.label}</div>
+            {/* ✅ Stats (reduced padding & spacing) */}
+            <div className="flex flex-wrap justify-center gap-3">
+              {EXPERIENCE_HERO_STATS.map((stat, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 min-w-[120px]"
+                >
+                  <div className="text-2xl font-bold text-[var(--color-primary)]">
+                    {stat.value}
+                  </div>
+                  <div className="text-xs">{stat.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
-
-
+        </div>
+      </section>
 
       {/* Stats Section with Background Pattern */}
       <section className="relative section-padding bg-gradient-to-b from-white via-gray-50 to-gray-100">
@@ -88,24 +104,30 @@ export default function Experience() {
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--color-primary)] to-transparent"></div>
           <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--color-primary)] to-transparent"></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="relative group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 p-8 text-center card-hover border border-gray-100"
               >
                 {/* Corner accent */}
                 <div className="absolute top-0 right-0 w-12 h-12 overflow-hidden">
                   <div className="absolute transform rotate-45 bg-gradient-to-br from-gray-50 to-gray-100 w-20 h-20 -top-10 -right-10"></div>
                 </div>
-                
-                <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
+
+                <div
+                  className={`inline-flex p-4 rounded-2xl bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] text-white mb-6 group-hover:scale-110 transition-transform duration-300`}
+                >
                   {stat.icon}
                 </div>
-                <div className="text-5xl font-bold text-gray-900 mb-2">{stat.number}</div>
-                <div className="text-gray-700 font-semibold mb-2">{stat.label}</div>
+                <div className="text-5xl font-bold text-gray-900 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-700 font-semibold mb-2">
+                  {stat.label}
+                </div>
                 <div className="text-sm text-gray-500">{stat.description}</div>
               </div>
             ))}
@@ -121,35 +143,49 @@ export default function Experience() {
               Diverse Expertise
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
-              Industry <span className="text-[var(--color-primary)]">Experience</span>
+              Industry{" "}
+              <span className="text-[var(--color-primary)]">Experience</span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
-              Serving businesses across diverse sectors with specialized financial solutions 
-              and industry-specific expertise
+              Serving businesses across diverse sectors with specialized
+              financial solutions and industry-specific expertise
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="group relative overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 p-6 card-hover border border-gray-100"
               >
                 <div className="absolute top-0 right-0 w-16 h-16 overflow-hidden">
-                  <div className={`absolute transform rotate-45 bg-gradient-to-br ${industry.color} w-24 h-24 -top-12 -right-12 opacity-10`}></div>
+                  <div
+                    className={`absolute transform rotate-45 bg-gradient-to-br ${industry.color} w-24 h-24 -top-12 -right-12 opacity-10`}
+                  ></div>
                 </div>
-                
+
                 <div className="flex items-start justify-between mb-4">
-                  <div className={`p-3 rounded-xl bg-gradient-to-r ${industry.color} text-white`}>
+                  <div
+                    className={`p-3 rounded-xl bg-gradient-to-r ${industry.color} text-white`}
+                  >
                     <Globe size={20} />
                   </div>
-                  <span className="text-lg font-bold text-gray-900">{industry.clients}</span>
+                  <span className="text-lg font-bold text-gray-900">
+                    {industry.clients}
+                  </span>
                 </div>
-                <h3 className="font-bold text-lg mb-3 text-gray-900">{industry.name}</h3>
-                <p className="text-gray-600 text-sm mb-4">{industry.description}</p>
+                <h3 className="font-bold text-lg mb-3 text-gray-900">
+                  {industry.name}
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  {industry.description}
+                </p>
                 <div className="flex items-center gap-1 text-sm text-[var(--color-primary)] font-medium">
                   <span>Learn More</span>
-                  <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                  <ChevronRight
+                    size={16}
+                    className="group-hover:translate-x-1 transition-transform"
+                  />
                 </div>
               </div>
             ))}
@@ -158,8 +194,7 @@ export default function Experience() {
       </section>
 
       {/* Journey Timeline with Background */}
-      <section className="relative section-padding bg-gradient-to-b from-gray-50 to-white">
-        {/* Diagonal background pattern */}
+      {/* <section className="relative section-padding bg-gradient-to-b from-gray-50 to-white">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary)]/5 via-transparent to-transparent"></div>
           <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.1)_25%,rgba(68,68,68,.1)_50%,transparent_50%,transparent_75%,rgba(68,68,68,.1)_75%,rgba(68,68,68,.1))] bg-[length:20px_20px]"></div>
@@ -179,7 +214,6 @@ export default function Experience() {
           </div>
 
           <div className="relative">
-            {/* Center timeline line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[var(--color-primary)] via-[var(--color-secondary)] to-transparent"></div>
 
             <div className="space-y-12">
@@ -203,8 +237,6 @@ export default function Experience() {
                       </p>
                     </div>
                   </div>
-
-                  {/* Timeline dot */}
                   <div className={`w-6 h-6 rounded-full border-4 border-white shadow-lg z-10 ${
                     milestone.highlight 
                       ? 'bg-[var(--color-primary)] animate-pulse' 
@@ -217,10 +249,10 @@ export default function Experience() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials with Gradient Background */}
-      <section className="section-padding bg-gradient-to-r from-[var(--color-primary)]/5 via-white to-[var(--color-secondary)]/5">
+      {/* <section className="section-padding bg-gradient-to-r from-[var(--color-primary)]/5 via-white to-[var(--color-secondary)]/5">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-[var(--color-primary)]/10 rounded-full text-[var(--color-primary)] font-semibold mb-4">
@@ -237,7 +269,7 @@ export default function Experience() {
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 p-8">
-                {/* Decorative quote mark */}
+
                 <div className="absolute top-6 right-6 text-6xl text-gray-100 opacity-50">"</div>
                 
                 <div className="flex gap-1 mb-6">
@@ -267,11 +299,10 @@ export default function Experience() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Recognition Section */}
-      <section className="relative section-padding bg-gradient-to-br from-[var(--color-gray-900)] to-[var(--color-gray-800)] text-white overflow-hidden">
-        {/* Background pattern */}
+      {/* <section className="relative section-padding bg-gradient-to-br from-[var(--color-gray-900)] to-[var(--color-gray-800)] text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full filter blur-3xl"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-[var(--color-primary)] rounded-full filter blur-3xl"></div>
@@ -310,24 +341,25 @@ export default function Experience() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] text-white py-20">
-        {/* Background pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl"></div>
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl"></div>
         </div>
-        
+
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <Award size={64} className="mx-auto mb-8 text-white/90" />
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Experience That <span className="text-white/90">Delivers Results</span>
+            Experience That{" "}
+            <span className="text-white/90">Delivers Results</span>
           </h2>
           <p className="text-xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Leverage our 1+ years of expertise for your financial success. Partner with a firm 
-            that combines experience with innovation for exceptional results.
+            Leverage our 1+ years of expertise for your financial success.
+            Partner with a firm that combines experience with innovation for
+            exceptional results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-[var(--color-primary)] hover:bg-gray-50 font-semibold px-8 py-4 rounded-xl text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">

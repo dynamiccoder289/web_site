@@ -29,7 +29,7 @@ export default function Leadership() {
             
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-10">
               Meet the visionary professionals who lead with expertise, integrity, and a commitment 
-              to client success at Excel Associates
+              to client success at Somasekhara & Associates
             </p>
             
             <div className="flex flex-wrap justify-center gap-6">
@@ -52,7 +52,7 @@ export default function Leadership() {
               Our <span className="text-[var(--color-primary)]">Leadership Philosophy</span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
-              At Excel Associates, leadership is about more than just experience—it's about vision, mentorship, 
+              At Somasekhara & Associates, leadership is about more than just experience—it's about vision, mentorship, 
               and creating lasting impact
             </p>
           </div>
@@ -70,7 +70,7 @@ export default function Leadership() {
       </section>
 
       {/* Leadership Team */}
-      <section className="section-padding bg-white">
+      {/* <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-[var(--color-primary)]/10 rounded-full text-[var(--color-primary)] font-semibold mb-4">
@@ -87,7 +87,6 @@ export default function Leadership() {
           <div className="space-y-20">
             {leaders.map((leader, index) => (
               <div key={index} className="relative">
-                {/* Decorative background for alternating pattern */}
                 <div className={`hidden lg:block absolute top-1/2 transform -translate-y-1/2 w-1/2 h-4/5 rounded-3xl ${
                   index % 2 === 0 
                     ? 'left-0 bg-gradient-to-r from-[var(--color-primary)]/5 to-transparent' 
@@ -97,10 +96,8 @@ export default function Leadership() {
                 <div className={`grid lg:grid-cols-2 gap-12 items-center relative ${
                   index % 2 === 1 ? 'lg:grid-flow-dense' : ''
                 }`}>
-                  {/* Image Column */}
                   <div className={`relative ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                     <div className="relative group">
-                      {/* Main Image */}
                       <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                         <img
                           src={leader.image}
@@ -109,8 +106,7 @@ export default function Leadership() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 via-transparent to-transparent"></div>
                       </div>
-                      
-                      {/* Floating Qualification Badge */}
+
                       <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-6 max-w-xs">
                         <div className="flex items-center gap-3">
                           <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] flex items-center justify-center">
@@ -124,7 +120,6 @@ export default function Leadership() {
                       </div>
                     </div>
 
-                    {/* Achievements Card */}
                     <div className="mt-12 bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-lg border border-gray-100">
                       <div className="flex items-center gap-3 mb-6">
                         <Star className="w-5 h-5 text-[var(--color-primary)]" />
@@ -141,7 +136,6 @@ export default function Leadership() {
                     </div>
                   </div>
 
-                  {/* Content Column */}
                   <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
                     <div className="mb-8">
                       <div className="flex items-center gap-3 mb-4">
@@ -154,7 +148,6 @@ export default function Leadership() {
                         <p className="text-gray-600">{leader.experience} of Professional Excellence</p>
                       </div>
 
-                      {/* Contact Buttons */}
                       <div className="flex items-center gap-4 mb-8">
                         <a
                           href={`mailto:${leader.contact}`}
@@ -174,7 +167,7 @@ export default function Leadership() {
                     </div>
 
                     <div className="space-y-8">
-                      {/* Bio */}
+                 
                       <div>
                         <h4 className="flex items-center gap-2 text-lg font-semibold text-gray-900 mb-4">
                           <Briefcase className="w-5 h-5 text-[var(--color-primary)]" />
@@ -183,7 +176,7 @@ export default function Leadership() {
                         <p className="text-gray-700 leading-relaxed">{leader.bio}</p>
                       </div>
 
-                      {/* Expertise */}
+                    
                       <div>
                         <h4 className="flex items-center gap-2 text-lg font-semibold text-gray-900 mb-4">
                           <Target className="w-5 h-5 text-[var(--color-primary)]" />
@@ -198,7 +191,6 @@ export default function Leadership() {
                         </div>
                       </div>
 
-                      {/* Education */}
                       <div>
                         <h4 className="flex items-center gap-2 text-lg font-semibold text-gray-900 mb-4">
                           <GraduationCap className="w-5 h-5 text-[var(--color-primary)]" />
@@ -220,7 +212,7 @@ export default function Leadership() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] text-white py-20">

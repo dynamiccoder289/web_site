@@ -1,11 +1,11 @@
 export const FIRM_MILESTONES = [
   {
-    year: '2024',
-    event: 'Excel Associates Founded',
+    year: '2025',
+    event: 'Somasekhara & Associates Founded',
     description: 'Launch of our modern accounting practice with cutting-edge technology',
   },
   {
-    year: '2024',
+    year: '2025',
     event: 'Digital-First Approach',
     description: 'Implementation of cloud-based accounting solutions from day one',
   },
@@ -69,7 +69,7 @@ export const FOUNDING_PRINCIPLES = [
 ];
 
 export const FIRM_HERO_STATS = [
-  { value: '2024', label: 'Year Founded' },
+  { value: '2025', label: 'Year Founded' },
   { value: 'New', label: 'Modern Approach' },
   { value: 'Vision', label: 'Driven' },
 ];
