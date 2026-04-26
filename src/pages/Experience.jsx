@@ -170,9 +170,9 @@ export default function Experience() {
                   >
                     <Globe size={20} />
                   </div>
-                  <span className="text-lg font-bold text-gray-900">
+                  {/* <span className="text-lg font-bold text-gray-900">
                     {industry.clients}
-                  </span>
+                  </span> */}
                 </div>
                 <h3 className="font-bold text-lg mb-3 text-gray-900">
                   {industry.name}
