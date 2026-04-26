@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://somasekharaassociates.com/sitemap.xml
+Sitemap: https://somasekhara.com/sitemap.xml
