@@ -254,11 +254,11 @@ export default function Navbar({ currentPage, onNavigate }) {
                 <div className="flex flex-col space-y-3 text-sm text-[var(--color-gray-600)]">
                   <div className="flex items-center gap-2">
                     <Phone className="w-4 h-4 text-[var(--color-primary)]" />
-                    <span>+91-98765 43210</span>
+                    <span>+91-9533680345</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Mail className="w-4 h-4 text-[var(--color-primary)]" />
-                    <span>info@somasekharaassociates.in</span>
+                    <span>ca@somasekhara.com</span>
                   </div>
                 </div>
               </div>

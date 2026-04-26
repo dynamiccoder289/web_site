@@ -15,10 +15,7 @@ export const CONTACT_INFO = [
   },
   {
     title: "Email Address",
-    details: [
-      "casomasekharanaidu@somasekharaassociates.com",
-      "somasekharaassociates@gmail.com"
-    ],
+    details: ["ca@somasekhara.com", "somasekharaassociates@gmail.com"],
     color: "from-amber-500 to-orange-600",
   },
   {
@@ -55,7 +52,8 @@ export const BRANCH_DETAILS = {
       line4: "ANDHRA PRADESH - 533210",
     },
     mapUrl: "https://maps.app.goo.gl/zipKnY81dhvGn49m7",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.8!2d82.0!3d16.58!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3a31426c1f96f7%3A0xb76aab969780c633!2sAmalapuram%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.8!2d82.0!3d16.58!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3a31426c1f96f7%3A0xb76aab969780c633!2sAmalapuram%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
   },
   branch: {
     name: "Branch Office - Hyderabad",
@@ -66,10 +64,11 @@ export const BRANCH_DETAILS = {
       line4: "MADHAPUR, HYDERABAD - 500081",
     },
     mapUrl: "https://maps.app.goo.gl/1Lim7zYqot2v2ytr8",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5!2d78.3912!3d17.4435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI2JzM2LjYiTiA3OMKwMjMnMjguMyJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5!2d78.3912!3d17.4435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI2JzM2LjYiTiA3OMKwMjMnMjguMyJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
   },
   phone: "+91 95336 80345",
-  email: "casomasekharanaidu@somasekharaassociates.com",
+  email: "ca@somasekhara.com",
   emailAlt: "somasekharaassociates@gmail.com",
   linkedin: "https://www.linkedin.com/in/ca-somasekhara-naidu-akula/",
   hours: {
