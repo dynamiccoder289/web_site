@@ -107,7 +107,10 @@ export default function Contact() {
                     </h3>
                     <div className="space-y-1">
                       {info.details.map((detail, i) => (
-                        <p key={i} className="text-gray-600 text-xs md:text-sm break-words">
+                        <p
+                          key={i}
+                          className="text-gray-600 text-xs md:text-sm break-words"
+                        >
                           {detail}
                         </p>
                       ))}
@@ -137,8 +140,8 @@ export default function Contact() {
                     Message Sent Successfully!
                   </h3>
                   <p className="text-gray-600 text-center text-sm">
-                    Thank you for contacting Somasekhara & Associates. We'll respond
-                    shortly.
+                    Thank you for contacting Somasekhara & Associates. We'll
+                    respond shortly.
                   </p>
                 </div>
               ) : (
@@ -253,13 +256,16 @@ export default function Contact() {
               Our Office Locations
             </h2>
             <p className="text-gray-600 max-w-xl mx-auto text-sm">
-              Visit our offices in Andhra Pradesh and Hyderabad for personalized financial consultation
+              Visit our offices in Andhra Pradesh and Hyderabad for personalized
+              financial consultation
             </p>
           </div>
 
           {/* Head Office */}
           <div className="mb-8">
-            <h3 className="text-xl font-bold mb-4 text-gray-900">{BRANCH_DETAILS.headOffice.name}</h3>
+            <h3 className="text-xl font-bold mb-4 text-gray-900">
+              {BRANCH_DETAILS.headOffice.name}
+            </h3>
             <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
               <iframe
                 src={BRANCH_DETAILS.headOffice.mapEmbedUrl}
@@ -275,7 +281,9 @@ export default function Contact() {
 
             <div className="mt-4 grid md:grid-cols-3 gap-4">
               <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                <h4 className="font-bold text-gray-900 text-sm mb-2">Head Office Address</h4>
+                <h4 className="font-bold text-gray-900 text-sm mb-2">
+                  Head Office Address
+                </h4>
                 <p className="text-gray-600 text-xs">
                   {BRANCH_DETAILS.headOffice.address.line1}
                   <br />
@@ -287,7 +295,9 @@ export default function Contact() {
                 </p>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                <h4 className="font-bold text-gray-900 text-sm mb-2">Quick Contact</h4>
+                <h4 className="font-bold text-gray-900 text-sm mb-2">
+                  Quick Contact
+                </h4>
                 <p className="text-gray-600 text-xs break-words">
                   <strong>Phone:</strong> {BRANCH_DETAILS.phone}
                   <br />
@@ -296,9 +306,9 @@ export default function Contact() {
                   <strong>Alt Email:</strong> {BRANCH_DETAILS.emailAlt}
                   <br />
                   <strong>LinkedIn:</strong>{" "}
-                  <a 
-                    href={BRANCH_DETAILS.linkedin} 
-                    target="_blank" 
+                  <a
+                    href={BRANCH_DETAILS.linkedin}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-[var(--color-primary)] hover:underline break-all"
                   >
@@ -307,7 +317,9 @@ export default function Contact() {
                 </p>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                <h4 className="font-bold text-gray-900 text-sm mb-2">Business Hours</h4>
+                <h4 className="font-bold text-gray-900 text-sm mb-2">
+                  Business Hours
+                </h4>
                 <p className="text-gray-600 text-xs">
                   <strong>Mon-Fri:</strong> {BRANCH_DETAILS.hours.weekdays}
                   <br />
@@ -320,8 +332,10 @@ export default function Contact() {
           </div>
 
           {/* Branch Office */}
-          <div>
-            <h3 className="text-xl font-bold mb-4 text-gray-900">{BRANCH_DETAILS.branch.name}</h3>
+          {/* <div>
+            <h3 className="text-xl font-bold mb-4 text-gray-900">
+              {BRANCH_DETAILS.branch.name}
+            </h3>
             <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
               <iframe
                 src={BRANCH_DETAILS.branch.mapEmbedUrl}
@@ -337,7 +351,9 @@ export default function Contact() {
 
             <div className="mt-4 grid md:grid-cols-3 gap-4">
               <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                <h4 className="font-bold text-gray-900 text-sm mb-2">Branch Office Address</h4>
+                <h4 className="font-bold text-gray-900 text-sm mb-2">
+                  Branch Office Address
+                </h4>
                 <p className="text-gray-600 text-xs">
                   {BRANCH_DETAILS.branch.address.line1}
                   <br />
@@ -349,7 +365,9 @@ export default function Contact() {
                 </p>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                <h4 className="font-bold text-gray-900 text-sm mb-2">Quick Contact</h4>
+                <h4 className="font-bold text-gray-900 text-sm mb-2">
+                  Quick Contact
+                </h4>
                 <p className="text-gray-600 text-xs break-words">
                   <strong>Phone:</strong> {BRANCH_DETAILS.phone}
                   <br />
@@ -358,9 +376,9 @@ export default function Contact() {
                   <strong>Alt Email:</strong> {BRANCH_DETAILS.emailAlt}
                   <br />
                   <strong>LinkedIn:</strong>{" "}
-                  <a 
-                    href={BRANCH_DETAILS.linkedin} 
-                    target="_blank" 
+                  <a
+                    href={BRANCH_DETAILS.linkedin}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-[var(--color-primary)] hover:underline break-all"
                   >
@@ -369,7 +387,9 @@ export default function Contact() {
                 </p>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                <h4 className="font-bold text-gray-900 text-sm mb-2">Business Hours</h4>
+                <h4 className="font-bold text-gray-900 text-sm mb-2">
+                  Business Hours
+                </h4>
                 <p className="text-gray-600 text-xs">
                   <strong>Mon-Fri:</strong> {BRANCH_DETAILS.hours.weekdays}
                   <br />
@@ -379,7 +399,7 @@ export default function Contact() {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -390,8 +410,8 @@ export default function Contact() {
             Ready to Transform Your Financial Management?
           </h2>
           <p className="text-white/90 mb-6 max-w-xl mx-auto text-sm">
-            Contact us today for a free consultation and discover how Somasekhara
-            & Associates can help your business grow.
+            Contact us today for a free consultation and discover how
+            Somasekhara & Associates can help your business grow.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
