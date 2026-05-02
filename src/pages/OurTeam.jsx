@@ -153,6 +153,93 @@ export default function OurTeam() {
         </div>
       </section> */}
 
+      {/* Founder Section */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 text-gray-900">
+              Meet Our Founder
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto px-4">
+              Leading with vision, expertise, and commitment to excellence
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl md:rounded-2xl overflow-hidden shadow-lg">
+              <div className="grid lg:grid-cols-5 gap-6 md:gap-8 p-6 sm:p-8 md:p-12">
+                {/* Photo Placeholder */}
+                <div className="lg:col-span-2">
+                  <div className="relative max-w-sm mx-auto lg:max-w-none">
+                    <div className="aspect-[3/4] bg-gradient-to-br from-[var(--color-primary)]/10 to-[var(--color-primary)]/5 rounded-xl border-2 border-[var(--color-primary)]/20 flex items-center justify-center">
+                      <div className="text-center px-4">
+                        <Users size={48} className="sm:w-16 sm:h-16 mx-auto mb-3 md:mb-4 text-[var(--color-primary)]/30" />
+                        {/* <p className="text-xs sm:text-sm text-gray-400">Photo Coming Soon</p> */}
+                      </div>
+                    </div>
+                    {/* Decorative element */}
+                    <div className="absolute -bottom-4 -right-4 w-20 h-20 md:w-24 md:h-24 bg-[var(--color-primary)]/10 rounded-full blur-2xl"></div>
+                  </div>
+                </div>
+
+                {/* Details */}
+                <div className="lg:col-span-3 flex flex-col justify-center">
+                  <div className="mb-4 md:mb-6">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+                      CA Somasekhara Naidu Akula
+                    </h3>
+                    <p className="text-lg sm:text-xl text-[var(--color-primary)] font-semibold mb-1">
+                      Founder & Managing Partner
+                    </p>
+                    <p className="text-sm sm:text-base text-gray-600 font-medium">
+                      Associate Chartered Accountant (ACA)
+                    </p>
+                  </div>
+
+                  <div className="space-y-3 md:space-y-4 mb-4 md:mb-6">
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                      With extensive experience in audit, taxation, and business advisory, 
+                      CA Somasekhara Naidu Akula founded Somasekhara & Associates with a 
+                      vision to provide comprehensive financial solutions to businesses of all sizes.
+                    </p>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                      His leadership and expertise have been instrumental in building a firm 
+                      that is trusted by clients across various industries for its integrity, 
+                      professionalism, and commitment to excellence.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+                    <div className="bg-white border border-gray-200 rounded-lg p-3 md:p-4">
+                      <div className="flex items-center gap-3">
+                        <div className="p-2 bg-[var(--color-primary)]/10 rounded-lg flex-shrink-0">
+                          <Award size={18} className="sm:w-5 sm:h-5 text-[var(--color-primary)]" />
+                        </div>
+                        <div>
+                          <p className="text-xs text-gray-500">Qualification</p>
+                          <p className="text-sm sm:text-base font-semibold text-gray-900">ACA</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-white border border-gray-200 rounded-lg p-3 md:p-4">
+                      <div className="flex items-center gap-3">
+                        <div className="p-2 bg-[var(--color-primary)]/10 rounded-lg flex-shrink-0">
+                          <Briefcase size={18} className="sm:w-5 sm:h-5 text-[var(--color-primary)]" />
+                        </div>
+                        <div>
+                          <p className="text-xs text-gray-500">Experience</p>
+                          <p className="text-sm sm:text-base font-semibold text-gray-900">5+ Years</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Culture Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">

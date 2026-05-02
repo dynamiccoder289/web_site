@@ -72,15 +72,20 @@ export default function Navbar({ currentPage, onNavigate }) {
     <>
 
       {/* ✅ Main Navbar */}
-      <nav className="bg-white/95 backdrop-blur sticky top-0 z-50 border-b border-[var(--color-gray-100)] shadow-sm">
+      <nav className="bg-white/95 backdrop-blur fixed top-0 left-0 right-0 z-50 border-b border-[var(--color-gray-100)] shadow-sm">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center h-20">
             {/* ✅ Logo */}
             <div
-              className="flex items-center cursor-pointer"
+              className="flex items-center gap-3 cursor-pointer"
               onClick={() => handleNavigate("home")}
             >
-              <div className="ml-3 leading-tight">
+              <img 
+                src="/logo.png" 
+                alt="Somasekhara & Associates Logo" 
+                className="h-12 w-12 md:h-14 md:w-14 object-contain"
+              />
+              <div className="leading-tight">
                 <h1 className="text-lg md:text-xl font-semibold text-[var(--color-gray-900)]">
                  SOMASEKHARA & ASSOCIATES
                 </h1>
