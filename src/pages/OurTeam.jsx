@@ -173,7 +173,10 @@ export default function OurTeam() {
                   <div className="relative max-w-sm mx-auto lg:max-w-none">
                     <div className="aspect-[3/4] bg-gradient-to-br from-[var(--color-primary)]/10 to-[var(--color-primary)]/5 rounded-xl border-2 border-[var(--color-primary)]/20 flex items-center justify-center">
                       <div className="text-center px-4">
-                        <Users size={48} className="sm:w-16 sm:h-16 mx-auto mb-3 md:mb-4 text-[var(--color-primary)]/30" />
+                        <Users
+                          size={48}
+                          className="sm:w-16 sm:h-16 mx-auto mb-3 md:mb-4 text-[var(--color-primary)]/30"
+                        />
                         {/* <p className="text-xs sm:text-sm text-gray-400">Photo Coming Soon</p> */}
                       </div>
                     </div>
@@ -198,14 +201,16 @@ export default function OurTeam() {
 
                   <div className="space-y-3 md:space-y-4 mb-4 md:mb-6">
                     <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-                      With extensive experience in audit, taxation, and business advisory, 
-                      CA Somasekhara Naidu Akula founded Somasekhara & Associates with a 
-                      vision to provide comprehensive financial solutions to businesses of all sizes.
+                      With extensive experience in audit, taxation, and business
+                      advisory, CA Somasekhara Naidu Akula founded Somasekhara &
+                      Associates with a vision to provide comprehensive
+                      financial solutions to businesses of all sizes.
                     </p>
                     <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-                      His leadership and expertise have been instrumental in building a firm 
-                      that is trusted by clients across various industries for its integrity, 
-                      professionalism, and commitment to excellence.
+                      His leadership and expertise have been instrumental in
+                      building a firm that is trusted by clients across various
+                      industries for its integrity, professionalism, and
+                      commitment to excellence.
                     </p>
                   </div>
 
@@ -213,22 +218,32 @@ export default function OurTeam() {
                     <div className="bg-white border border-gray-200 rounded-lg p-3 md:p-4">
                       <div className="flex items-center gap-3">
                         <div className="p-2 bg-[var(--color-primary)]/10 rounded-lg flex-shrink-0">
-                          <Award size={18} className="sm:w-5 sm:h-5 text-[var(--color-primary)]" />
+                          <Award
+                            size={18}
+                            className="sm:w-5 sm:h-5 text-[var(--color-primary)]"
+                          />
                         </div>
                         <div>
                           <p className="text-xs text-gray-500">Qualification</p>
-                          <p className="text-sm sm:text-base font-semibold text-gray-900">ACA</p>
+                          <p className="text-sm sm:text-base font-semibold text-gray-900">
+                            ACA
+                          </p>
                         </div>
                       </div>
                     </div>
                     <div className="bg-white border border-gray-200 rounded-lg p-3 md:p-4">
                       <div className="flex items-center gap-3">
                         <div className="p-2 bg-[var(--color-primary)]/10 rounded-lg flex-shrink-0">
-                          <Briefcase size={18} className="sm:w-5 sm:h-5 text-[var(--color-primary)]" />
+                          <Briefcase
+                            size={18}
+                            className="sm:w-5 sm:h-5 text-[var(--color-primary)]"
+                          />
                         </div>
                         <div>
                           <p className="text-xs text-gray-500">Experience</p>
-                          <p className="text-sm sm:text-base font-semibold text-gray-900">5+ Years</p>
+                          <p className="text-sm sm:text-base font-semibold text-gray-900">
+                            2+ Years
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -257,9 +272,9 @@ export default function OurTeam() {
                 Our Culture
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                At Somasekhara & Associates, we believe our people are our greatest
-                asset. We foster a culture that values excellence, integrity,
-                collaboration, and continuous learning.
+                At Somasekhara & Associates, we believe our people are our
+                greatest asset. We foster a culture that values excellence,
+                integrity, collaboration, and continuous learning.
               </p>
 
               <div className="space-y-4">
