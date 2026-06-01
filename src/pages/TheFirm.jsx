@@ -242,7 +242,7 @@ export default function TheFirm() {
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Commitment to You</h2>
           <p className="text-xl text-white/90 leading-relaxed mb-8">
-            As a new firm, we bring fresh energy, innovative thinking, and an unwavering commitment to your success. 
+            As a chartered accountant firm, we bring fresh energy, innovative thinking, and an unwavering commitment to your success. 
             We're building our reputation one client at a time, ensuring that every engagement receives our full attention 
             and expertise.
           </p>

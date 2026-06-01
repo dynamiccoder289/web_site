@@ -1,10 +1,13 @@
+import { useNavigate } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Linkedin, Twitter, Instagram } from 'lucide-react';
 import { BRANCH_DETAILS } from '../constants/contactConstants';
 
-export default function Footer({ onNavigate }) {
+export default function Footer() {
+  const navigate = useNavigate();
+
   const handleNavigate = (page) => {
-    onNavigate(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const path = page === "home" ? "/" : `/${page}`;
+    navigate(path);
   };
 
   return (

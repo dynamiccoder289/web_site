@@ -242,7 +242,7 @@ export default function OurTeam() {
                         <div>
                           <p className="text-xs text-gray-500">Experience</p>
                           <p className="text-sm sm:text-base font-semibold text-gray-900">
-                            2+ Years
+                            4+ Years
                           </p>
                         </div>
                       </div>

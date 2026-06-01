@@ -1,7 +1,9 @@
 import { Award, Mail, Linkedin, BookOpen, Briefcase, GraduationCap, Target, Users, Star, ChevronRight } from 'lucide-react';
 import { LEADERS, LEADERSHIP_PRINCIPLES, LEADERSHIP_STATS } from '../constants/leadershipConstants';
+import { useNavigate } from "react-router-dom";
 
 export default function Leadership() {
+  const navigate = useNavigate();
   const leaders = LEADERS;
   const leadershipPrinciples = LEADERSHIP_PRINCIPLES;
 
@@ -232,10 +234,14 @@ export default function Leadership() {
             with our leadership team for strategic financial guidance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-[var(--color-primary)] hover:bg-gray-50 font-semibold px-8 py-4 rounded-xl text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            <button 
+            onClick={() => navigate('/contact')}
+            className="bg-white text-[var(--color-primary)] hover:bg-gray-50 font-semibold px-8 py-4 rounded-xl text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
               Book Leadership Consultation
             </button>
-            <button className="border-2 border-white/30 hover:border-white text-white font-semibold px-8 py-4 rounded-xl text-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+            <button 
+            onClick={() => navigate('/our-team')}
+            className="border-2 border-white/30 hover:border-white text-white font-semibold px-8 py-4 rounded-xl text-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
               Meet Our Full Team
             </button>
           </div>

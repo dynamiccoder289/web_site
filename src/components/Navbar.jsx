@@ -1,19 +1,25 @@
 import { useState, useEffect, useRef } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { FaCaretDown } from "react-icons/fa";
 
-export default function Navbar({ currentPage, onNavigate }) {
+export default function Navbar() {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [hoverTimeout, setHoverTimeout] = useState(null);
   const dropdownRefs = useRef({});
 
+  // Get current page from location
+  const currentPage = location.pathname.slice(1) || "home";
+
   // ✅ Fully reset state on navigation
   const handleNavigate = (page) => {
-    onNavigate(page);
+    const path = page === "home" ? "/" : `/${page}`;
+    navigate(path);
     setIsOpen(false);
     setOpenDropdown(null);
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   // ✅ Handle hover with delay to prevent accidental closing

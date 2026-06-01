@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { HOME_SLIDES } from '../constants/homeConstants';
 
@@ -86,7 +87,8 @@ function CornerWords({ slideIndex, animKey }) {
   );
 }
 
-export default function Home({ onNavigate }) {
+export default function Home() {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [progress, setProgress] = useState(0);
   const [textKey, setTextKey] = useState(0);
@@ -95,7 +97,10 @@ export default function Home({ onNavigate }) {
 
   const slides = HOME_SLIDES.map((slide) => ({
     ...slide,
-    ctaAction: () => onNavigate(slide.ctaTarget),
+    ctaAction: () => {
+      const path = slide.ctaTarget === "home" ? "/" : `/${slide.ctaTarget}`;
+      navigate(path);
+    },
   }));
 
   const startProgress = () => {

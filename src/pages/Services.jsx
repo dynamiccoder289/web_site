@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   FileText,
   Calculator,
@@ -24,7 +25,8 @@ const SERVICE_ICONS = [
   <Briefcase size={48} />,
 ];
 
-export default function Services({ onNavigate }) {
+export default function Services() {
+  const navigate = useNavigate();
   const services = SERVICES_LIST.map((s, i) => ({ ...s, icon: SERVICE_ICONS[i] }));
 
   return (
@@ -75,7 +77,7 @@ export default function Services({ onNavigate }) {
                 </div>
 
                 <button
-                  onClick={() => onNavigate('contact')}
+                  onClick={() => navigate('/contact')}
                   className="mt-6 text-[var(--color-primary)] font-semibold flex items-center gap-2 hover:gap-3 transition-all"
                 >
                   Get Started <ChevronRight size={18} />
@@ -95,7 +97,7 @@ export default function Services({ onNavigate }) {
               Every business is unique. Let's discuss how we can tailor our services to meet your specific requirements.
             </p>
             <button
-              onClick={() => onNavigate('contact')}
+              onClick={() => navigate('/contact')}
               className="btn-primary bg-white text-[var(--color-primary)] hover:bg-gray-100 text-lg px-8 py-4"
             >
               Schedule a Consultation
