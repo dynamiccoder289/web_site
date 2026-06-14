@@ -1,10 +1,9 @@
-import { Award, Mail, Linkedin, BookOpen, Briefcase, GraduationCap, Target, Users, Star, ChevronRight } from 'lucide-react';
-import { LEADERS, LEADERSHIP_PRINCIPLES, LEADERSHIP_STATS } from '../constants/leadershipConstants';
+import { Users, ChevronRight } from 'lucide-react';
+import { LEADERSHIP_PRINCIPLES, LEADERSHIP_STATS } from '../constants/leadershipConstants';
 import { useNavigate } from "react-router-dom";
 
 export default function Leadership() {
   const navigate = useNavigate();
-  const leaders = LEADERS;
   const leadershipPrinciples = LEADERSHIP_PRINCIPLES;
 
   return (

@@ -1,23 +1,14 @@
 import {
   Award,
-  Building2,
   TrendingUp,
   Users,
   Globe,
-  CheckCircle,
-  Star,
-  Clock,
-  Target,
   Briefcase,
   ChevronRight,
-  Trophy,
 } from "lucide-react";
 import {
   EXPERIENCE_STATS,
   INDUSTRIES,
-  MILESTONES,
-  TESTIMONIALS,
-  RECOGNITIONS,
   EXPERIENCE_HERO_STATS,
 } from "../constants/experienceConstants";
 
@@ -31,9 +22,6 @@ const STAT_ICONS = [
 export default function Experience() {
   const stats = EXPERIENCE_STATS.map((s, i) => ({ ...s, icon: STAT_ICONS[i] }));
   const industries = INDUSTRIES;
-  const milestones = MILESTONES;
-  const testimonials = TESTIMONIALS;
-  const recognitions = RECOGNITIONS;
 
   return (
     <div className="min-h-screen">

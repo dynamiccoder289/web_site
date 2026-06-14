@@ -11,8 +11,6 @@ import {
   CheckCircle,
 } from "lucide-react";
 import {
-  TEAM_MEMBERS,
-  DEPARTMENTS,
   CULTURE_VALUES,
   TEAM_STATS,
   WHY_JOIN_US,
@@ -29,11 +27,6 @@ const CULTURE_ICONS = [BookOpen, Users, Heart, Target];
 const STAT_ICONS = [Users, Award, Calendar, Target];
 
 export default function OurTeam() {
-  const teamMembers = TEAM_MEMBERS;
-  const departments = DEPARTMENTS.map((d, i) => ({
-    ...d,
-    icon: DEPT_ICONS[i],
-  }));
   const cultureValues = CULTURE_VALUES.map((c, i) => ({
     ...c,
     icon: CULTURE_ICONS[i],

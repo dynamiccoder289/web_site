@@ -1,5 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';import { useNavigate } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { HOME_SLIDES } from '../constants/homeConstants';
 
@@ -46,24 +45,22 @@ const posStyle = {
   rb2: { bottom: '12%', right: '6%', textAlign: 'right' },  // bottom-right lower
 };
 
-function CornerWords({ slideIndex, animKey }) {
-  const words = SLIDE_WORDS[slideIndex] || [];
+function CornerWordsList({ words }) {
   const [visible, setVisible] = useState([]);
 
   useEffect(() => {
-    setVisible([]);
     const timers = words.map((_, i) =>
       setTimeout(() => setVisible((v) => [...v, i]), WORD_DELAYS[i] ?? i * 700)
     );
     return () => timers.forEach(clearTimeout);
-  }, [animKey]);
+  }, [words]);
 
   return (
     <>
       {words.map((word, i) =>
         visible.includes(i) ? (
           <span
-            key={`${animKey}-${i}`}
+            key={i}
             style={{
               position: 'absolute',
               zIndex: 25,
@@ -85,6 +82,12 @@ function CornerWords({ slideIndex, animKey }) {
       )}
     </>
   );
+}
+
+// Wrapper resets animation state by remounting CornerWordsList on animKey change
+function CornerWords({ slideIndex, animKey }) {
+  const words = SLIDE_WORDS[slideIndex] || [];
+  return <CornerWordsList key={animKey} words={words} />;
 }
 
 export default function Home() {

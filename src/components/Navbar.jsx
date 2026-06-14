@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { FaCaretDown } from "react-icons/fa";
@@ -9,7 +9,6 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [hoverTimeout, setHoverTimeout] = useState(null);
-  const dropdownRefs = useRef({});
 
   // Get current page from location
   const currentPage = location.pathname.slice(1) || "home";
